@@ -81,7 +81,7 @@ class Ui_AuthWindow(object):
 
         self.widget_2 = QWidget(self.centralwidget)
         self.widget_2.setObjectName(u"widget_2")
-        self.widget_2.setGeometry(QRect(384, 106, 175, 284))
+        self.widget_2.setGeometry(QRect(380, 200, 175, 181))
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(1)
@@ -90,9 +90,9 @@ class Ui_AuthWindow(object):
         self.widget_2.setMinimumSize(QSize(175, 0))
         self.widget_2.setFocusPolicy(Qt.NoFocus)
         self.verticalLayout_2 = QVBoxLayout(self.widget_2)
-        self.verticalLayout_2.setSpacing(10)
+        self.verticalLayout_2.setSpacing(6)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 120, 0, 0)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.label_2 = QLabel(self.widget_2)
         self.label_2.setObjectName(u"label_2")
 
@@ -100,7 +100,7 @@ class Ui_AuthWindow(object):
 
         self.loginLineEdit = QLineEdit(self.widget_2)
         self.loginLineEdit.setObjectName(u"loginLineEdit")
-        self.loginLineEdit.setMinimumSize(QSize(0, 25))
+        self.loginLineEdit.setMinimumSize(QSize(0, 30))
 
         self.verticalLayout_2.addWidget(self.loginLineEdit, 0, Qt.AlignTop)
 
@@ -111,7 +111,7 @@ class Ui_AuthWindow(object):
 
         self.passwordLineEdit = QLineEdit(self.widget_2)
         self.passwordLineEdit.setObjectName(u"passwordLineEdit")
-        self.passwordLineEdit.setMinimumSize(QSize(0, 25))
+        self.passwordLineEdit.setMinimumSize(QSize(0, 30))
 
         self.verticalLayout_2.addWidget(self.passwordLineEdit, 0, Qt.AlignTop)
 
@@ -135,6 +135,14 @@ class Ui_AuthWindow(object):
         self.loginBtn.raise_()
         self.label_2.raise_()
         self.label_3.raise_()
+        self.seeBtn = QPushButton(self.centralwidget)
+        self.seeBtn.setObjectName(u"seeBtn")
+        self.seeBtn.setGeometry(QRect(560, 295, 41, 24))
+        icon2 = QIcon()
+        icon2.addFile(u":/feather/icons/feather/eye.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.seeBtn.setIcon(icon2)
+        self.seeBtn.setIconSize(QSize(24, 24))
+        self.seeBtn.setFlat(True)
         AuthWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(AuthWindow)
@@ -152,5 +160,6 @@ class Ui_AuthWindow(object):
         self.label_3.setText(QCoreApplication.translate("AuthWindow", u"\u041f\u0430\u0440\u043e\u043b\u044c", None))
         self.loginBtn.setText(QCoreApplication.translate("AuthWindow", u"\u0412\u043e\u0439\u0442\u0438", None))
         self.passwordRecoverLbl.setText(QCoreApplication.translate("AuthWindow", u"\u0417\u0430\u0431\u044b\u043b\u0438 \u043f\u0430\u0440\u043e\u043b\u044c?", None))
+        self.seeBtn.setText("")
     # retranslateUi
 

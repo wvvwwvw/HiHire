@@ -1,4 +1,4 @@
-from PySide6.QtGui import QFontDatabase, QFont
+from PySide6.QtGui import QFontDatabase, QFont, QIcon
 from PySide6.QtWidgets import QMainWindow, QMessageBox, QLineEdit, QVBoxLayout, QDialog, QApplication
 from PySide6.QtCore import Signal
 
@@ -26,9 +26,9 @@ class AuthWindow(QMainWindow):
 
         self.ui.passwordLineEdit.setEchoMode(QLineEdit.Password)
         self.ui.loginBtn.clicked.connect(self.handle_login)
+        self.ui.seeBtn.clicked.connect(self.show_password)
         self.ui.passwordRecoverLbl.mousePressEvent = self.handle_password_recover
 
-        # Инициализация элементов для восстановления пароля
         self.recovery_dialog = None
         self.init_password_recovery_dialog()
 
@@ -136,14 +136,12 @@ class AuthWindow(QMainWindow):
             cursor = self.db.connection.cursor(dictionary=True)
             cursor.callproc('AuthenticateUser', (login, password))
 
-            # Получаем все результаты хранимой процедуры
             results = []
             for result in cursor.stored_results():
                 results.append(result.fetchone())
 
             cursor.close()
 
-            # Проверяем результаты
             if results and len(results) > 0:
                 auth_result = results[0]
                 if auth_result and auth_result.get('id') is not None and auth_result.get('role_id') is not None:
@@ -158,7 +156,7 @@ class AuthWindow(QMainWindow):
             return None
 
     def loadUbuntuFont(self):
-        """Load and apply Ubuntu font to the auth window"""
+        """Загружаем и применяем шрифт для текста"""
         font_id = QFontDatabase.addApplicationFont("D:/pycharm/HiHire/fonts/fontRU/Ubuntu-Regular.ttf")
         if font_id == -1:
             print("Failed to load Ubuntu font")
@@ -170,12 +168,17 @@ class AuthWindow(QMainWindow):
         else:
             ubuntu_font = QFont("Sans Serif")
 
-        # Apply font to auth window and all its children
         self.setFont(ubuntu_font)
         QApplication.setFont(ubuntu_font)
+
+
+    def show_password(self):
+        """Переключает видимость пароля"""
+        if self.ui.passwordLineEdit.echoMode() == QLineEdit.Password:
+            self.ui.passwordLineEdit.setEchoMode(QLineEdit.Normal)
+        else:
+            self.ui.passwordLineEdit.setEchoMode(QLineEdit.Password)
 
     def closeEvent(self, event):
         self.db.disconnect()
         super().closeEvent(event)
-
-

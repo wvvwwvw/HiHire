@@ -59,5 +59,18 @@
         "OrginizationDormain": "HiHire.org"
       }
     }
+  ],
+  "QPushButtonGroup": [
+    {
+      "Buttons": [
+        "seeBtn"
+      ],
+      "Style": [
+        {
+          "Active": "QPushButton{background-color: transparent; font-weight: normal; border-top: 2px solid transparent; border-left: 3px solid transparent;border-bottom: 3px solid transparent;}",
+          "NotActive": "QPushButton{background-color: transparent; font-weight: normal; border-top: 2px solid transparent; border-left: 3px solid transparent;border-bottom: 3px solid transparent;}"
+        }
+      ]
+    }
   ]
 }
