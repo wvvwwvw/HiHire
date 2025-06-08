@@ -173,7 +173,7 @@ class AuthWindow(QMainWindow):
 
 
     def show_password(self):
-        """Переключает видимость пароля"""
+        """Управляет видимостью пароля"""
         if self.ui.passwordLineEdit.echoMode() == QLineEdit.Password:
             self.ui.passwordLineEdit.setEchoMode(QLineEdit.Normal)
         else:
