@@ -5,11 +5,12 @@ from PySide6.QtCore import Qt
 
 
 class AddQuestionnaireDialog(QDialog):
-    def __init__(self, db, user_id, parent=None):
+    def __init__(self, db, user_id, role_id, parent=None):
         """Инициализирует диалог создания нового шаблона опроса"""
         super().__init__(parent)
         self.db = db
         self.user_id = user_id
+        self.role_id = role_id
         self.setWindowTitle("Создать новый шаблон опроса")
         self.setMinimumSize(800, 600)
 
@@ -28,6 +29,7 @@ class AddQuestionnaireDialog(QDialog):
         self.description_edit.setPlaceholderText("Введите описание (необязательно)")
         self.position_combo = QComboBox()
         self.is_public_check = QCheckBox("Сделать шаблон публичным")
+        self.is_public_check.setVisible(self.role_id == 1)
 
         form_layout.addRow("Название:", self.title_edit)
         form_layout.addRow("Описание:", self.description_edit)

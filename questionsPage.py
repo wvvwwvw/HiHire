@@ -362,7 +362,7 @@ class QuestionsPage:
 
     def show_add_questionary_dialog(self):
         """Показывает диалог добавления новой анкеты"""
-        dialog = AddQuestionnaireDialog(self.db, self.user_id, self.main_window)
+        dialog = AddQuestionnaireDialog(self.db, self.user_id, self.role_id, self.main_window)
         if dialog.exec() == QDialog.Accepted:
             self.load_user_templates()
             self.main_window.show_success_message("Шаблон успешно создан!")
