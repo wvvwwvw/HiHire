@@ -23,7 +23,7 @@ class QuestionsPage:
         self.ui.addQuestionaryBtn.clicked.connect(self.show_add_questionary_dialog)
         self.ui.saveQuestionsBtn.clicked.connect(self.save_questionnaire_results)
 
-    def set_user_info(self, user_id: int, role_id: int):
+    def set_user_info(self, user_id, role_id):
         """Устанавливает информацию о пользователе"""
         self.user_id = user_id
         self.role_id = role_id

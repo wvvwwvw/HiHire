@@ -610,43 +610,36 @@ class EmployeePage:
         if not self.current_employee_id:
             return
 
-        dialog = QMessageBox(self.main_window)
-        dialog.setWindowTitle("Создание пользователя")
-        dialog.setText("Введите данные для создания пользователя")
+        dialog = QDialog(self.main_window)
+        dialog.setWindowTitle("Создать пользователя")
+
+        layout = QFormLayout(dialog)
 
         login_edit = QLineEdit()
         password_edit = QLineEdit()
+        password_edit.setEchoMode(QLineEdit.Password)
         email_password_edit = QLineEdit()
         role_combo = QComboBox()
 
-        password_edit.setEchoMode(QLineEdit.Password)
-        email_password_edit.setEchoMode(QLineEdit.Password)
+        roles = self.db.execute_query("SELECT id, name FROM Roles")
+        for role in roles:
+            role_combo.addItem(role['name'], role['id'])
 
-        layout = QFormLayout()
         layout.addRow("Логин:", login_edit)
         layout.addRow("Пароль:", password_edit)
-        layout.addRow("Пароль для почты:", email_password_edit)
+        layout.addRow("Пароль от почты:", email_password_edit)
         layout.addRow("Роль:", role_combo)
 
-        dialog.setLayout(layout)
+        button_box = QDialogButtonBox()
+        button_box.addButton("Создать", QDialogButtonBox.AcceptRole)
+        button_box.addButton("Отмена", QDialogButtonBox.RejectRole)
 
-        dialog.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-        dialog.setButtonText(QMessageBox.Ok, "Создать")
-        dialog.setButtonText(QMessageBox.Cancel, "Отмена")
-        dialog.setDefaultButton(QMessageBox.Ok)
-        dialog.setIcon(QMessageBox.Question)
+        button_box.accepted.connect(dialog.accept)
+        button_box.rejected.connect(dialog.reject)
 
-        dialog.setStyleSheet(f"""
-            QMessageBox {{
-                background-color: {self.main_window.theme.COLOR_BACKGROUND_1};
-                color: {self.main_window.theme.COLOR_TEXT_1};
-            }}
-            QMessageBox QLabel {{
-                color: {self.main_window.theme.COLOR_TEXT_1};
-            }}
-        """)
+        layout.addRow(button_box)
 
-        if dialog.exec() == QMessageBox.Ok:
+        if dialog.exec() == QDialog.Accepted:
             self.create_user_for_employee(
                 self.current_employee_id,
                 login_edit.text(),

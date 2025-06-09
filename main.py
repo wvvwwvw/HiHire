@@ -28,6 +28,12 @@ class HiHire(QMainWindow):
         self.role_id = role_id
         if hasattr(self.app_functions, 'questions_page'):
             self.app_functions.questions_page.set_user_info(user_id, role_id)
+        if hasattr(self.app_functions, 'answers_page'):
+            self.app_functions.answers_page.init_reports_page(role_id, user_id)
+        if hasattr(self.app_functions, 'analytics_page'):
+            self.app_functions.analytics_page.init_analytic(role_id, user_id)
+        if hasattr(self.app_functions, 'employees_page'):
+            self.app_functions.employees_page.init_employees_page(role_id)
 
     def show_message(self, text, title, icon=QMessageBox.Information):
         """Универсальный метод для показа сообщений"""

@@ -105,7 +105,7 @@ class GuiFunctions():
 
     def show_analytics_page(self):
         """Показывает страницу аналитики и обновляет данные"""
-        self.analytics_page.init_analystic(self.main.role_id, self.main.user_id)
+        self.analytics_page.init_analytic(self.main.role_id, self.main.user_id)
 
     def _show_profile_window(self):
         """Показывает окно профиля пользователя"""
