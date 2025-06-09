@@ -139,10 +139,10 @@
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>384</x>
-      <y>106</y>
+      <x>380</x>
+      <y>200</y>
       <width>175</width>
-      <height>284</height>
+      <height>181</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -162,13 +162,13 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <property name="spacing">
-      <number>10</number>
+      <number>6</number>
      </property>
      <property name="leftMargin">
       <number>0</number>
      </property>
      <property name="topMargin">
-      <number>120</number>
+      <number>0</number>
      </property>
      <property name="rightMargin">
       <number>0</number>
@@ -188,7 +188,7 @@
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>25</height>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -205,7 +205,7 @@
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>25</height>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -242,6 +242,32 @@
     <zorder>loginBtn</zorder>
     <zorder>label_2</zorder>
     <zorder>label_3</zorder>
+   </widget>
+   <widget class="QPushButton" name="seeBtn">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>295</y>
+      <width>41</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string />
+    </property>
+    <property name="icon">
+     <iconset resource="../Qss/icons/_icons.qrc">
+      <normaloff>:/feather/icons/feather/eye.png</normaloff>:/feather/icons/feather/eye.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
  </widget>

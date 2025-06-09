@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(944, 602)
+        MainWindow.resize(1370, 602)
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -77,6 +77,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(0, 5, 0, 0)
         self.questionsBtn = QPushButton(self.topBtnsWiget)
         self.questionsBtn.setObjectName(u"questionsBtn")
+        font = QFont()
+        font.setPointSize(10)
+        self.questionsBtn.setFont(font)
         icon1 = QIcon()
         icon1.addFile(u":/feather/icons/feather/file-plus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.questionsBtn.setIcon(icon1)
@@ -87,6 +90,7 @@ class Ui_MainWindow(object):
 
         self.reportsBtn = QPushButton(self.topBtnsWiget)
         self.reportsBtn.setObjectName(u"reportsBtn")
+        self.reportsBtn.setFont(font)
         icon2 = QIcon()
         icon2.addFile(u":/feather/icons/feather/archive.png", QSize(), QIcon.Normal, QIcon.Off)
         self.reportsBtn.setIcon(icon2)
@@ -98,6 +102,7 @@ class Ui_MainWindow(object):
 
         self.workersBtn = QPushButton(self.topBtnsWiget)
         self.workersBtn.setObjectName(u"workersBtn")
+        self.workersBtn.setFont(font)
         icon3 = QIcon()
         icon3.addFile(u":/feather/icons/feather/users.png", QSize(), QIcon.Normal, QIcon.Off)
         self.workersBtn.setIcon(icon3)
@@ -107,6 +112,7 @@ class Ui_MainWindow(object):
 
         self.analysisBtn = QPushButton(self.topBtnsWiget)
         self.analysisBtn.setObjectName(u"analysisBtn")
+        self.analysisBtn.setFont(font)
         icon4 = QIcon()
         icon4.addFile(u":/feather/icons/feather/pie-chart.png", QSize(), QIcon.Normal, QIcon.Off)
         self.analysisBtn.setIcon(icon4)
@@ -134,6 +140,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 5, 0, 5)
         self.prifileBtn = QPushButton(self.bottomBtnsWidget)
         self.prifileBtn.setObjectName(u"prifileBtn")
+        self.prifileBtn.setFont(font)
         icon5 = QIcon()
         icon5.addFile(u":/feather/icons/feather/user.png", QSize(), QIcon.Normal, QIcon.Off)
         self.prifileBtn.setIcon(icon5)
@@ -144,6 +151,7 @@ class Ui_MainWindow(object):
 
         self.settingsBtn = QPushButton(self.bottomBtnsWidget)
         self.settingsBtn.setObjectName(u"settingsBtn")
+        self.settingsBtn.setFont(font)
         icon6 = QIcon()
         icon6.addFile(u":/feather/icons/feather/settings.png", QSize(), QIcon.Normal, QIcon.Off)
         self.settingsBtn.setIcon(icon6)
@@ -154,6 +162,7 @@ class Ui_MainWindow(object):
 
         self.helpBtn = QPushButton(self.bottomBtnsWidget)
         self.helpBtn.setObjectName(u"helpBtn")
+        self.helpBtn.setFont(font)
         icon7 = QIcon()
         icon7.addFile(u":/feather/icons/feather/help-circle.png", QSize(), QIcon.Normal, QIcon.Off)
         self.helpBtn.setIcon(icon7)
@@ -164,6 +173,7 @@ class Ui_MainWindow(object):
 
         self.infoBtn = QPushButton(self.bottomBtnsWidget)
         self.infoBtn.setObjectName(u"infoBtn")
+        self.infoBtn.setFont(font)
         icon8 = QIcon()
         icon8.addFile(u":/feather/icons/feather/info.png", QSize(), QIcon.Normal, QIcon.Off)
         self.infoBtn.setIcon(icon8)
@@ -224,6 +234,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.label_2 = QLabel(self.widget_4)
         self.label_2.setObjectName(u"label_2")
+        font1 = QFont()
+        font1.setPointSize(12)
+        self.label_2.setFont(font1)
         self.label_2.setLayoutDirection(Qt.LeftToRight)
 
         self.verticalLayout_7.addWidget(self.label_2, 0, Qt.AlignHCenter)
@@ -236,11 +249,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.label_3 = QLabel(self.frame)
         self.label_3.setObjectName(u"label_3")
+        self.label_3.setFont(font1)
 
         self.horizontalLayout_3.addWidget(self.label_3)
 
         self.themeList = QComboBox(self.frame)
         self.themeList.setObjectName(u"themeList")
+        font2 = QFont()
+        font2.setPointSize(11)
+        self.themeList.setFont(font2)
 
         self.horizontalLayout_3.addWidget(self.themeList)
 
@@ -346,8 +363,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setContentsMargins(5, 5, 5, 5)
         self.logoPic = QLabel(self.systemBtnsWidget)
         self.logoPic.setObjectName(u"logoPic")
-        self.logoPic.setMaximumSize(QSize(35, 35))
+        self.logoPic.setMaximumSize(QSize(45, 45))
         self.logoPic.setSizeIncrement(QSize(0, 0))
+        font3 = QFont()
+        font3.setPointSize(9)
+        self.logoPic.setFont(font3)
         self.logoPic.setPixmap(QPixmap(u"../Qss/icons/logo.png"))
         self.logoPic.setScaledContents(True)
         self.logoPic.setMargin(0)
@@ -358,11 +378,11 @@ class Ui_MainWindow(object):
         self.logoName = QLabel(self.systemBtnsWidget)
         self.logoName.setObjectName(u"logoName")
         self.logoName.setMaximumSize(QSize(16777215, 16777215))
-        font = QFont()
-        font.setFamilies([u"Bahnschrift SemiBold"])
-        font.setPointSize(21)
-        font.setBold(True)
-        self.logoName.setFont(font)
+        font4 = QFont()
+        font4.setFamilies([u"Bahnschrift SemiBold"])
+        font4.setPointSize(23)
+        font4.setBold(True)
+        self.logoName.setFont(font4)
         self.logoName.setMargin(5)
 
         self.horizontalLayout_6.addWidget(self.logoName)
@@ -451,16 +471,16 @@ class Ui_MainWindow(object):
         self.label60.setObjectName(u"label60")
         self.label60.setMinimumSize(QSize(110, 25))
         self.label60.setMaximumSize(QSize(110, 25))
-        font1 = QFont()
-        font1.setPointSize(14)
-        self.label60.setFont(font1)
+        font5 = QFont()
+        font5.setPointSize(14)
+        self.label60.setFont(font5)
 
         self.horizontalLayout_42.addWidget(self.label60)
 
         self.comboBox = QComboBox(self.widget_36)
         self.comboBox.setObjectName(u"comboBox")
         self.comboBox.setMinimumSize(QSize(150, 25))
-        self.comboBox.setFont(font1)
+        self.comboBox.setFont(font5)
 
         self.horizontalLayout_42.addWidget(self.comboBox)
 
@@ -468,7 +488,7 @@ class Ui_MainWindow(object):
         self.label_9.setObjectName(u"label_9")
         self.label_9.setMinimumSize(QSize(150, 25))
         self.label_9.setMaximumSize(QSize(150, 25))
-        self.label_9.setFont(font1)
+        self.label_9.setFont(font5)
 
         self.horizontalLayout_42.addWidget(self.label_9)
 
@@ -476,7 +496,7 @@ class Ui_MainWindow(object):
         self.comboBox_2.setObjectName(u"comboBox_2")
         self.comboBox_2.setMinimumSize(QSize(200, 25))
         self.comboBox_2.setMaximumSize(QSize(200, 25))
-        self.comboBox_2.setFont(font1)
+        self.comboBox_2.setFont(font5)
 
         self.horizontalLayout_42.addWidget(self.comboBox_2)
 
@@ -492,7 +512,7 @@ class Ui_MainWindow(object):
         self.label_20.setObjectName(u"label_20")
         self.label_20.setMinimumSize(QSize(100, 25))
         self.label_20.setMaximumSize(QSize(60, 25))
-        self.label_20.setFont(font1)
+        self.label_20.setFont(font5)
 
         self.horizontalLayout_43.addWidget(self.label_20, 0, Qt.AlignLeft)
 
@@ -507,9 +527,7 @@ class Ui_MainWindow(object):
         self.dateEdit.setObjectName(u"dateEdit")
         self.dateEdit.setMinimumSize(QSize(200, 30))
         self.dateEdit.setMaximumSize(QSize(200, 30))
-        font2 = QFont()
-        font2.setPointSize(12)
-        self.dateEdit.setFont(font2)
+        self.dateEdit.setFont(font1)
 
         self.verticalLayout_59.addWidget(self.dateEdit)
 
@@ -520,7 +538,7 @@ class Ui_MainWindow(object):
         self.label_25.setObjectName(u"label_25")
         self.label_25.setMinimumSize(QSize(45, 25))
         self.label_25.setMaximumSize(QSize(45, 25))
-        self.label_25.setFont(font1)
+        self.label_25.setFont(font5)
 
         self.horizontalLayout_43.addWidget(self.label_25, 0, Qt.AlignLeft)
 
@@ -535,7 +553,7 @@ class Ui_MainWindow(object):
         self.dateEdit_2.setObjectName(u"dateEdit_2")
         self.dateEdit_2.setMinimumSize(QSize(160, 30))
         self.dateEdit_2.setMaximumSize(QSize(160, 30))
-        self.dateEdit_2.setFont(font2)
+        self.dateEdit_2.setFont(font1)
 
         self.verticalLayout_60.addWidget(self.dateEdit_2)
 
@@ -553,7 +571,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 562, 399))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 553, 392))
         self.verticalLayout_58 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_58.setSpacing(0)
         self.verticalLayout_58.setObjectName(u"verticalLayout_58")
@@ -603,7 +621,8 @@ class Ui_MainWindow(object):
         self.clabel = QLabel(self.widget_16)
         self.clabel.setObjectName(u"clabel")
         self.clabel.setMinimumSize(QSize(70, 20))
-        self.clabel.setMaximumSize(QSize(70, 20))
+        self.clabel.setMaximumSize(QSize(80, 20))
+        self.clabel.setFont(font1)
 
         self.horizontalLayout_22.addWidget(self.clabel)
 
@@ -611,6 +630,7 @@ class Ui_MainWindow(object):
         self.candidateLineEdit.setObjectName(u"candidateLineEdit")
         self.candidateLineEdit.setMinimumSize(QSize(150, 25))
         self.candidateLineEdit.setMaximumSize(QSize(150, 25))
+        self.candidateLineEdit.setFont(font1)
 
         self.horizontalLayout_22.addWidget(self.candidateLineEdit)
 
@@ -619,13 +639,14 @@ class Ui_MainWindow(object):
 
         self.widget_15 = QWidget(self.widget_14)
         self.widget_15.setObjectName(u"widget_15")
-        self.widget_15.setMinimumSize(QSize(585, 0))
+        self.widget_15.setMinimumSize(QSize(700, 0))
         self.horizontalLayout_21 = QHBoxLayout(self.widget_15)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
         self.dlabel = QLabel(self.widget_15)
         self.dlabel.setObjectName(u"dlabel")
-        self.dlabel.setMinimumSize(QSize(100, 20))
-        self.dlabel.setMaximumSize(QSize(100, 20))
+        self.dlabel.setMinimumSize(QSize(115, 20))
+        self.dlabel.setMaximumSize(QSize(115, 20))
+        self.dlabel.setFont(font1)
 
         self.horizontalLayout_21.addWidget(self.dlabel)
 
@@ -633,6 +654,7 @@ class Ui_MainWindow(object):
         self.stlabel.setObjectName(u"stlabel")
         self.stlabel.setMinimumSize(QSize(20, 20))
         self.stlabel.setMaximumSize(QSize(20, 20))
+        self.stlabel.setFont(font1)
 
         self.horizontalLayout_21.addWidget(self.stlabel)
 
@@ -640,6 +662,7 @@ class Ui_MainWindow(object):
         self.startDateEdit.setObjectName(u"startDateEdit")
         self.startDateEdit.setMinimumSize(QSize(110, 25))
         self.startDateEdit.setMaximumSize(QSize(110, 25))
+        self.startDateEdit.setFont(font1)
 
         self.horizontalLayout_21.addWidget(self.startDateEdit)
 
@@ -647,6 +670,7 @@ class Ui_MainWindow(object):
         self.label_18.setObjectName(u"label_18")
         self.label_18.setMinimumSize(QSize(30, 20))
         self.label_18.setMaximumSize(QSize(30, 20))
+        self.label_18.setFont(font1)
 
         self.horizontalLayout_21.addWidget(self.label_18)
 
@@ -654,39 +678,43 @@ class Ui_MainWindow(object):
         self.endDateEdit.setObjectName(u"endDateEdit")
         self.endDateEdit.setMinimumSize(QSize(110, 25))
         self.endDateEdit.setMaximumSize(QSize(110, 25))
+        self.endDateEdit.setFont(font1)
 
         self.horizontalLayout_21.addWidget(self.endDateEdit)
 
-        self.widget_44 = QWidget(self.widget_15)
-        self.widget_44.setObjectName(u"widget_44")
-        self.widget_44.setMinimumSize(QSize(180, 0))
-        self.horizontalLayout_49 = QHBoxLayout(self.widget_44)
-        self.horizontalLayout_49.setObjectName(u"horizontalLayout_49")
-        self.horizontalLayout_49.setContentsMargins(0, 0, 0, 0)
-        self.exportBtn = QPushButton(self.widget_44)
+        self.widget_39 = QWidget(self.widget_15)
+        self.widget_39.setObjectName(u"widget_39")
+        self.widget_39.setMinimumSize(QSize(265, 0))
+        self.horizontalLayout_44 = QHBoxLayout(self.widget_39)
+        self.horizontalLayout_44.setSpacing(2)
+        self.horizontalLayout_44.setObjectName(u"horizontalLayout_44")
+        self.horizontalLayout_44.setContentsMargins(0, 0, 0, 0)
+        self.exportBtn = QPushButton(self.widget_39)
         self.exportBtn.setObjectName(u"exportBtn")
-        self.exportBtn.setMinimumSize(QSize(85, 30))
-        self.exportBtn.setMaximumSize(QSize(85, 30))
+        self.exportBtn.setMinimumSize(QSize(130, 30))
+        self.exportBtn.setMaximumSize(QSize(130, 30))
+        self.exportBtn.setFont(font1)
         icon13 = QIcon()
         icon13.addFile(u":/feather/icons/feather/arrow-down-circle.png", QSize(), QIcon.Normal, QIcon.Off)
         self.exportBtn.setIcon(icon13)
         self.exportBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_49.addWidget(self.exportBtn)
+        self.horizontalLayout_44.addWidget(self.exportBtn)
 
-        self.importBtn = QPushButton(self.widget_44)
+        self.importBtn = QPushButton(self.widget_39)
         self.importBtn.setObjectName(u"importBtn")
-        self.importBtn.setMinimumSize(QSize(85, 30))
-        self.importBtn.setMaximumSize(QSize(85, 30))
+        self.importBtn.setMinimumSize(QSize(130, 30))
+        self.importBtn.setMaximumSize(QSize(130, 30))
+        self.importBtn.setFont(font1)
         icon14 = QIcon()
         icon14.addFile(u":/feather/icons/feather/arrow-up-circle.png", QSize(), QIcon.Normal, QIcon.Off)
         self.importBtn.setIcon(icon14)
         self.importBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_49.addWidget(self.importBtn)
+        self.horizontalLayout_44.addWidget(self.importBtn)
 
 
-        self.horizontalLayout_21.addWidget(self.widget_44, 0, Qt.AlignRight)
+        self.horizontalLayout_21.addWidget(self.widget_39)
 
 
         self.horizontalLayout_20.addWidget(self.widget_15, 0, Qt.AlignLeft)
@@ -696,50 +724,56 @@ class Ui_MainWindow(object):
 
         self.widget_13 = QWidget(self.filtersWidget)
         self.widget_13.setObjectName(u"widget_13")
-        self.widget_13.setMinimumSize(QSize(170, 45))
+        self.widget_13.setMinimumSize(QSize(0, 45))
         self.horizontalLayout_47 = QHBoxLayout(self.widget_13)
         self.horizontalLayout_47.setSpacing(9)
         self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
         self.horizontalLayout_47.setContentsMargins(0, 0, 0, 0)
         self.label_11 = QLabel(self.widget_13)
         self.label_11.setObjectName(u"label_11")
-        self.label_11.setMinimumSize(QSize(75, 20))
-        self.label_11.setMaximumSize(QSize(75, 20))
+        self.label_11.setMinimumSize(QSize(100, 20))
+        self.label_11.setMaximumSize(QSize(100, 20))
+        self.label_11.setFont(font1)
 
         self.horizontalLayout_47.addWidget(self.label_11, 0, Qt.AlignVCenter)
 
         self.positionComboBox = QComboBox(self.widget_13)
         self.positionComboBox.setObjectName(u"positionComboBox")
-        self.positionComboBox.setMinimumSize(QSize(150, 25))
-        self.positionComboBox.setMaximumSize(QSize(150, 25))
+        self.positionComboBox.setMinimumSize(QSize(200, 25))
+        self.positionComboBox.setMaximumSize(QSize(200, 25))
+        self.positionComboBox.setFont(font1)
 
         self.horizontalLayout_47.addWidget(self.positionComboBox)
 
         self.slabel = QLabel(self.widget_13)
         self.slabel.setObjectName(u"slabel")
-        self.slabel.setMinimumSize(QSize(50, 20))
-        self.slabel.setMaximumSize(QSize(50, 20))
+        self.slabel.setMinimumSize(QSize(60, 20))
+        self.slabel.setMaximumSize(QSize(60, 20))
+        self.slabel.setFont(font1)
 
-        self.horizontalLayout_47.addWidget(self.slabel, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.horizontalLayout_47.addWidget(self.slabel, 0, Qt.AlignVCenter)
 
         self.statusesComboBox = QComboBox(self.widget_13)
         self.statusesComboBox.setObjectName(u"statusesComboBox")
         self.statusesComboBox.setMinimumSize(QSize(150, 25))
         self.statusesComboBox.setMaximumSize(QSize(150, 25))
+        self.statusesComboBox.setFont(font1)
 
         self.horizontalLayout_47.addWidget(self.statusesComboBox)
 
         self.label60_2 = QLabel(self.widget_13)
         self.label60_2.setObjectName(u"label60_2")
-        self.label60_2.setMinimumSize(QSize(145, 25))
-        self.label60_2.setMaximumSize(QSize(145, 25))
+        self.label60_2.setMinimumSize(QSize(200, 25))
+        self.label60_2.setMaximumSize(QSize(200, 25))
+        self.label60_2.setFont(font1)
 
-        self.horizontalLayout_47.addWidget(self.label60_2)
+        self.horizontalLayout_47.addWidget(self.label60_2, 0, Qt.AlignVCenter)
 
         self.scoreSortComboBox = QComboBox(self.widget_13)
         self.scoreSortComboBox.setObjectName(u"scoreSortComboBox")
-        self.scoreSortComboBox.setMinimumSize(QSize(130, 25))
-        self.scoreSortComboBox.setMaximumSize(QSize(130, 25))
+        self.scoreSortComboBox.setMinimumSize(QSize(200, 25))
+        self.scoreSortComboBox.setMaximumSize(QSize(200, 25))
+        self.scoreSortComboBox.setFont(font1)
 
         self.horizontalLayout_47.addWidget(self.scoreSortComboBox)
 
@@ -760,7 +794,7 @@ class Ui_MainWindow(object):
         self.candidatesSscrollArea.setWidgetResizable(True)
         self.candidatesScrollAreaWidgetContents = QWidget()
         self.candidatesScrollAreaWidgetContents.setObjectName(u"candidatesScrollAreaWidgetContents")
-        self.candidatesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 557, 382))
+        self.candidatesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 953, 375))
         self.verticalLayout_40 = QVBoxLayout(self.candidatesScrollAreaWidgetContents)
         self.verticalLayout_40.setSpacing(5)
         self.verticalLayout_40.setObjectName(u"verticalLayout_40")
@@ -800,7 +834,7 @@ class Ui_MainWindow(object):
         self.exitFromCandidateBtn.setObjectName(u"exitFromCandidateBtn")
         self.exitFromCandidateBtn.setMinimumSize(QSize(85, 30))
         self.exitFromCandidateBtn.setMaximumSize(QSize(85, 30))
-        self.exitFromCandidateBtn.setFont(font2)
+        self.exitFromCandidateBtn.setFont(font1)
         icon15 = QIcon()
         icon15.addFile(u":/feather/icons/feather/corner-up-left.png", QSize(), QIcon.Normal, QIcon.Off)
         self.exitFromCandidateBtn.setIcon(icon15)
@@ -812,9 +846,9 @@ class Ui_MainWindow(object):
         self.candidateLabel.setObjectName(u"candidateLabel")
         self.candidateLabel.setMinimumSize(QSize(350, 25))
         self.candidateLabel.setMaximumSize(QSize(350, 25))
-        font3 = QFont()
-        font3.setPointSize(16)
-        self.candidateLabel.setFont(font3)
+        font6 = QFont()
+        font6.setPointSize(16)
+        self.candidateLabel.setFont(font6)
 
         self.verticalLayout_35.addWidget(self.candidateLabel)
 
@@ -833,7 +867,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.statusLabel.sizePolicy().hasHeightForWidth())
         self.statusLabel.setSizePolicy(sizePolicy1)
         self.statusLabel.setMinimumSize(QSize(60, 0))
-        self.statusLabel.setFont(font2)
+        self.statusLabel.setFont(font1)
 
         self.horizontalLayout_24.addWidget(self.statusLabel)
 
@@ -854,7 +888,7 @@ class Ui_MainWindow(object):
         self.candidatScrollArea.setWidgetResizable(True)
         self.candidateScrollAreaWidgetContents = QWidget()
         self.candidateScrollAreaWidgetContents.setObjectName(u"candidateScrollAreaWidgetContents")
-        self.candidateScrollAreaWidgetContents.setGeometry(QRect(0, 0, 562, 373))
+        self.candidateScrollAreaWidgetContents.setGeometry(QRect(0, 0, 947, 366))
         self.verticalLayout_38 = QVBoxLayout(self.candidateScrollAreaWidgetContents)
         self.verticalLayout_38.setSpacing(0)
         self.verticalLayout_38.setObjectName(u"verticalLayout_38")
@@ -871,9 +905,9 @@ class Ui_MainWindow(object):
         self.candidateFIOLabel.setObjectName(u"candidateFIOLabel")
         self.candidateFIOLabel.setMinimumSize(QSize(300, 40))
         self.candidateFIOLabel.setMaximumSize(QSize(16777215, 40))
-        font4 = QFont()
-        font4.setPointSize(20)
-        self.candidateFIOLabel.setFont(font4)
+        font7 = QFont()
+        font7.setPointSize(20)
+        self.candidateFIOLabel.setFont(font7)
 
         self.verticalLayout_61.addWidget(self.candidateFIOLabel)
 
@@ -885,9 +919,7 @@ class Ui_MainWindow(object):
         self.llabel.setObjectName(u"llabel")
         self.llabel.setMinimumSize(QSize(120, 0))
         self.llabel.setMaximumSize(QSize(165, 16777215))
-        font5 = QFont()
-        font5.setPointSize(11)
-        self.llabel.setFont(font5)
+        self.llabel.setFont(font2)
 
         self.horizontalLayout_29.addWidget(self.llabel)
 
@@ -895,7 +927,7 @@ class Ui_MainWindow(object):
         self.linkLabel.setObjectName(u"linkLabel")
         self.linkLabel.setMinimumSize(QSize(200, 0))
         self.linkLabel.setMaximumSize(QSize(150, 16777215))
-        self.linkLabel.setFont(font5)
+        self.linkLabel.setFont(font2)
 
         self.horizontalLayout_29.addWidget(self.linkLabel)
 
@@ -903,13 +935,13 @@ class Ui_MainWindow(object):
         self.label110.setObjectName(u"label110")
         self.label110.setMinimumSize(QSize(45, 0))
         self.label110.setMaximumSize(QSize(55, 16777215))
-        self.label110.setFont(font5)
+        self.label110.setFont(font2)
 
         self.horizontalLayout_29.addWidget(self.label110)
 
         self.emailLabel = QLabel(self.widget_22)
         self.emailLabel.setObjectName(u"emailLabel")
-        self.emailLabel.setFont(font5)
+        self.emailLabel.setFont(font2)
 
         self.horizontalLayout_29.addWidget(self.emailLabel)
 
@@ -923,13 +955,13 @@ class Ui_MainWindow(object):
         self.label52 = QLabel(self.widget_23)
         self.label52.setObjectName(u"label52")
         self.label52.setMaximumSize(QSize(110, 16777215))
-        self.label52.setFont(font5)
+        self.label52.setFont(font2)
 
         self.horizontalLayout_30.addWidget(self.label52)
 
         self.positionName = QLabel(self.widget_23)
         self.positionName.setObjectName(u"positionName")
-        self.positionName.setFont(font5)
+        self.positionName.setFont(font2)
 
         self.horizontalLayout_30.addWidget(self.positionName)
 
@@ -943,13 +975,13 @@ class Ui_MainWindow(object):
         self.label53 = QLabel(self.widget_19)
         self.label53.setObjectName(u"label53")
         self.label53.setMaximumSize(QSize(90, 16777215))
-        self.label53.setFont(font5)
+        self.label53.setFont(font2)
 
         self.horizontalLayout_26.addWidget(self.label53)
 
         self.scoreLabel = QLabel(self.widget_19)
         self.scoreLabel.setObjectName(u"scoreLabel")
-        self.scoreLabel.setFont(font5)
+        self.scoreLabel.setFont(font2)
 
         self.horizontalLayout_26.addWidget(self.scoreLabel)
 
@@ -962,7 +994,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
         self.recommendationText = QLabel(self.widget_20)
         self.recommendationText.setObjectName(u"recommendationText")
-        self.recommendationText.setFont(font5)
+        self.recommendationText.setFont(font2)
 
         self.horizontalLayout_27.addWidget(self.recommendationText, 0, Qt.AlignLeft|Qt.AlignTop)
 
@@ -973,7 +1005,7 @@ class Ui_MainWindow(object):
         self.questionnaryName.setObjectName(u"questionnaryName")
         self.questionnaryName.setMinimumSize(QSize(300, 40))
         self.questionnaryName.setMaximumSize(QSize(300, 40))
-        self.questionnaryName.setFont(font1)
+        self.questionnaryName.setFont(font5)
 
         self.verticalLayout_61.addWidget(self.questionnaryName)
 
@@ -1009,7 +1041,7 @@ class Ui_MainWindow(object):
         self.rejectBtn.setObjectName(u"rejectBtn")
         self.rejectBtn.setMinimumSize(QSize(130, 30))
         self.rejectBtn.setMaximumSize(QSize(130, 30))
-        self.rejectBtn.setFont(font2)
+        self.rejectBtn.setFont(font1)
         icon16 = QIcon()
         icon16.addFile(u":/feather/icons/feather/thumbs-down.png", QSize(), QIcon.Normal, QIcon.Off)
         self.rejectBtn.setIcon(icon16)
@@ -1021,7 +1053,7 @@ class Ui_MainWindow(object):
         self.acceptBtn.setObjectName(u"acceptBtn")
         self.acceptBtn.setMinimumSize(QSize(130, 30))
         self.acceptBtn.setMaximumSize(QSize(130, 30))
-        self.acceptBtn.setFont(font2)
+        self.acceptBtn.setFont(font1)
         icon17 = QIcon()
         icon17.addFile(u":/feather/icons/feather/thumbs-up.png", QSize(), QIcon.Normal, QIcon.Off)
         self.acceptBtn.setIcon(icon17)
@@ -1033,7 +1065,7 @@ class Ui_MainWindow(object):
         self.disagreeBtn.setObjectName(u"disagreeBtn")
         self.disagreeBtn.setMinimumSize(QSize(130, 30))
         self.disagreeBtn.setMaximumSize(QSize(130, 30))
-        self.disagreeBtn.setFont(font2)
+        self.disagreeBtn.setFont(font1)
         icon18 = QIcon()
         icon18.addFile(u":/feather/icons/feather/user-minus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.disagreeBtn.setIcon(icon18)
@@ -1045,7 +1077,7 @@ class Ui_MainWindow(object):
         self.agreeBtn.setObjectName(u"agreeBtn")
         self.agreeBtn.setMinimumSize(QSize(130, 30))
         self.agreeBtn.setMaximumSize(QSize(130, 30))
-        self.agreeBtn.setFont(font2)
+        self.agreeBtn.setFont(font1)
         icon19 = QIcon()
         icon19.addFile(u":/feather/icons/feather/user-check.png", QSize(), QIcon.Normal, QIcon.Off)
         self.agreeBtn.setIcon(icon19)
@@ -1075,6 +1107,7 @@ class Ui_MainWindow(object):
         self.addQuestionaryBtn.setObjectName(u"addQuestionaryBtn")
         self.addQuestionaryBtn.setMinimumSize(QSize(150, 30))
         self.addQuestionaryBtn.setMaximumSize(QSize(150, 30))
+        self.addQuestionaryBtn.setFont(font1)
         icon20 = QIcon()
         icon20.addFile(u":/font_awesome_regular/icons/font_awesome/regular/square-plus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.addQuestionaryBtn.setIcon(icon20)
@@ -1095,7 +1128,9 @@ class Ui_MainWindow(object):
         self.labelSys.setObjectName(u"labelSys")
         self.labelSys.setMinimumSize(QSize(0, 25))
         self.labelSys.setMaximumSize(QSize(16777215, 25))
-        self.labelSys.setFont(font5)
+        font8 = QFont()
+        font8.setPointSize(17)
+        self.labelSys.setFont(font8)
 
         self.verticalLayout_20.addWidget(self.labelSys)
 
@@ -1115,7 +1150,7 @@ class Ui_MainWindow(object):
         self.label1.setObjectName(u"label1")
         self.label1.setMinimumSize(QSize(0, 0))
         self.label1.setMaximumSize(QSize(16777215, 16777215))
-        self.label1.setFont(font2)
+        self.label1.setFont(font1)
         self.label1.setWordWrap(True)
 
         self.verticalLayout_22.addWidget(self.label1, 0, Qt.AlignVCenter)
@@ -1141,7 +1176,7 @@ class Ui_MainWindow(object):
         self.label2 = QLabel(self.backTemplateFrame)
         self.label2.setObjectName(u"label2")
         self.label2.setMinimumSize(QSize(0, 0))
-        self.label2.setFont(font2)
+        self.label2.setFont(font1)
         self.label2.setWordWrap(True)
 
         self.verticalLayout_23.addWidget(self.label2)
@@ -1168,7 +1203,7 @@ class Ui_MainWindow(object):
         self.label_7 = QLabel(self.frontTemplateFrame)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setMinimumSize(QSize(0, 0))
-        self.label_7.setFont(font2)
+        self.label_7.setFont(font1)
         self.label_7.setWordWrap(True)
 
         self.verticalLayout_24.addWidget(self.label_7)
@@ -1195,9 +1230,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
         self.labelUser = QLabel(self.usersWidgets)
         self.labelUser.setObjectName(u"labelUser")
-        self.labelUser.setMinimumSize(QSize(220, 25))
-        self.labelUser.setMaximumSize(QSize(220, 25))
-        self.labelUser.setFont(font5)
+        self.labelUser.setMinimumSize(QSize(310, 25))
+        self.labelUser.setMaximumSize(QSize(310, 25))
+        self.labelUser.setFont(font8)
 
         self.verticalLayout_21.addWidget(self.labelUser)
 
@@ -1228,15 +1263,17 @@ class Ui_MainWindow(object):
         self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
         self.widget_25 = QWidget(self.efiltersWidget)
         self.widget_25.setObjectName(u"widget_25")
-        self.widget_25.setMinimumSize(QSize(0, 0))
+        self.widget_25.setMinimumSize(QSize(800, 0))
+        self.widget_25.setMaximumSize(QSize(800, 16777215))
         self.horizontalLayout_31 = QHBoxLayout(self.widget_25)
         self.horizontalLayout_31.setSpacing(0)
         self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
         self.horizontalLayout_31.setContentsMargins(0, 0, 0, 0)
         self.label54 = QLabel(self.widget_25)
         self.label54.setObjectName(u"label54")
-        self.label54.setMinimumSize(QSize(40, 30))
-        self.label54.setMaximumSize(QSize(40, 30))
+        self.label54.setMinimumSize(QSize(50, 30))
+        self.label54.setMaximumSize(QSize(50, 30))
+        self.label54.setFont(font1)
 
         self.horizontalLayout_31.addWidget(self.label54)
 
@@ -1244,20 +1281,23 @@ class Ui_MainWindow(object):
         self.fioLineEdit.setObjectName(u"fioLineEdit")
         self.fioLineEdit.setMinimumSize(QSize(220, 25))
         self.fioLineEdit.setMaximumSize(QSize(220, 25))
+        self.fioLineEdit.setFont(font1)
 
         self.horizontalLayout_31.addWidget(self.fioLineEdit)
 
         self.label_6 = QLabel(self.widget_25)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setMinimumSize(QSize(70, 30))
-        self.label_6.setMaximumSize(QSize(70, 30))
+        self.label_6.setMinimumSize(QSize(100, 30))
+        self.label_6.setMaximumSize(QSize(100, 30))
+        self.label_6.setFont(font1)
 
         self.horizontalLayout_31.addWidget(self.label_6)
 
         self.ePositionComboBox = QComboBox(self.widget_25)
         self.ePositionComboBox.setObjectName(u"ePositionComboBox")
-        self.ePositionComboBox.setMinimumSize(QSize(150, 25))
-        self.ePositionComboBox.setMaximumSize(QSize(150, 25))
+        self.ePositionComboBox.setMinimumSize(QSize(170, 25))
+        self.ePositionComboBox.setMaximumSize(QSize(170, 25))
+        self.ePositionComboBox.setFont(font1)
 
         self.horizontalLayout_31.addWidget(self.ePositionComboBox)
 
@@ -1267,28 +1307,30 @@ class Ui_MainWindow(object):
         self.widget_24 = QWidget(self.efiltersWidget)
         self.widget_24.setObjectName(u"widget_24")
         self.widget_24.setMinimumSize(QSize(0, 0))
-        self.widget_24.setMaximumSize(QSize(16777215, 48))
+        self.widget_24.setMaximumSize(QSize(800, 48))
         self.horizontalLayout_32 = QHBoxLayout(self.widget_24)
         self.horizontalLayout_32.setObjectName(u"horizontalLayout_32")
         self.widget_21 = QWidget(self.widget_24)
         self.widget_21.setObjectName(u"widget_21")
         self.widget_21.setMinimumSize(QSize(250, 0))
-        self.widget_21.setMaximumSize(QSize(250, 16777215))
+        self.widget_21.setMaximumSize(QSize(16777215, 16777215))
         self.horizontalLayout_28 = QHBoxLayout(self.widget_21)
         self.horizontalLayout_28.setSpacing(0)
         self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
         self.horizontalLayout_28.setContentsMargins(0, 0, 0, 0)
         self.label55 = QLabel(self.widget_21)
         self.label55.setObjectName(u"label55")
-        self.label55.setMinimumSize(QSize(50, 30))
-        self.label55.setMaximumSize(QSize(50, 30))
+        self.label55.setMinimumSize(QSize(60, 30))
+        self.label55.setMaximumSize(QSize(60, 30))
+        self.label55.setFont(font1)
 
         self.horizontalLayout_28.addWidget(self.label55)
 
         self.eStatusComboBox = QComboBox(self.widget_21)
         self.eStatusComboBox.setObjectName(u"eStatusComboBox")
-        self.eStatusComboBox.setMinimumSize(QSize(100, 25))
-        self.eStatusComboBox.setMaximumSize(QSize(150, 25))
+        self.eStatusComboBox.setMinimumSize(QSize(200, 25))
+        self.eStatusComboBox.setMaximumSize(QSize(200, 25))
+        self.eStatusComboBox.setFont(font1)
 
         self.horizontalLayout_28.addWidget(self.eStatusComboBox)
 
@@ -1298,21 +1340,23 @@ class Ui_MainWindow(object):
         self.widget_40 = QWidget(self.widget_24)
         self.widget_40.setObjectName(u"widget_40")
         self.widget_40.setMinimumSize(QSize(320, 0))
-        self.widget_40.setMaximumSize(QSize(320, 16777215))
+        self.widget_40.setMaximumSize(QSize(16777215, 16777215))
         self.horizontalLayout_48 = QHBoxLayout(self.widget_40)
         self.horizontalLayout_48.setObjectName(u"horizontalLayout_48")
         self.horizontalLayout_48.setContentsMargins(0, 0, 0, 0)
         self.label56 = QLabel(self.widget_40)
         self.label56.setObjectName(u"label56")
-        self.label56.setMinimumSize(QSize(165, 30))
-        self.label56.setMaximumSize(QSize(165, 30))
+        self.label56.setMinimumSize(QSize(240, 30))
+        self.label56.setMaximumSize(QSize(240, 30))
+        self.label56.setFont(font1)
 
         self.horizontalLayout_48.addWidget(self.label56)
 
         self.eDateComboBox = QComboBox(self.widget_40)
         self.eDateComboBox.setObjectName(u"eDateComboBox")
-        self.eDateComboBox.setMinimumSize(QSize(150, 25))
-        self.eDateComboBox.setMaximumSize(QSize(150, 25))
+        self.eDateComboBox.setMinimumSize(QSize(200, 25))
+        self.eDateComboBox.setMaximumSize(QSize(200, 25))
+        self.eDateComboBox.setFont(font1)
 
         self.horizontalLayout_48.addWidget(self.eDateComboBox)
 
@@ -1336,7 +1380,7 @@ class Ui_MainWindow(object):
         self.employeesScrollArea.setWidgetResizable(True)
         self.employeesScrollAreaWidgetContents = QWidget()
         self.employeesScrollAreaWidgetContents.setObjectName(u"employeesScrollAreaWidgetContents")
-        self.employeesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 562, 412))
+        self.employeesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 947, 405))
         self.verticalLayout_43 = QVBoxLayout(self.employeesScrollAreaWidgetContents)
         self.verticalLayout_43.setSpacing(6)
         self.verticalLayout_43.setObjectName(u"verticalLayout_43")
@@ -1384,9 +1428,9 @@ class Ui_MainWindow(object):
         self.label57.setObjectName(u"label57")
         self.label57.setMinimumSize(QSize(250, 35))
         self.label57.setMaximumSize(QSize(250, 35))
-        font6 = QFont()
-        font6.setPointSize(15)
-        self.label57.setFont(font6)
+        font9 = QFont()
+        font9.setPointSize(15)
+        self.label57.setFont(font9)
 
         self.verticalLayout_44.addWidget(self.label57)
 
@@ -1422,7 +1466,7 @@ class Ui_MainWindow(object):
         self.employeeStatus.setObjectName(u"employeeStatus")
         self.employeeStatus.setMinimumSize(QSize(0, 35))
         self.employeeStatus.setMaximumSize(QSize(16777215, 35))
-        self.employeeStatus.setFont(font5)
+        self.employeeStatus.setFont(font2)
 
         self.verticalLayout_45.addWidget(self.employeeStatus, 0, Qt.AlignRight|Qt.AlignVCenter)
 
@@ -1450,7 +1494,7 @@ class Ui_MainWindow(object):
         self.employeeScrollArea.setWidgetResizable(True)
         self.employeeScrollAreaWidgetContents = QWidget()
         self.employeeScrollAreaWidgetContents.setObjectName(u"employeeScrollAreaWidgetContents")
-        self.employeeScrollAreaWidgetContents.setGeometry(QRect(0, -146, 587, 487))
+        self.employeeScrollAreaWidgetContents.setGeometry(QRect(0, 0, 930, 487))
         self.verticalLayout_48 = QVBoxLayout(self.employeeScrollAreaWidgetContents)
         self.verticalLayout_48.setSpacing(0)
         self.verticalLayout_48.setObjectName(u"verticalLayout_48")
@@ -1721,9 +1765,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_31.setObjectName(u"verticalLayout_31")
         self.label91 = QLabel(self.widget_41)
         self.label91.setObjectName(u"label91")
-        font7 = QFont()
-        font7.setPointSize(17)
-        self.label91.setFont(font7)
+        self.label91.setFont(font8)
 
         self.verticalLayout_31.addWidget(self.label91)
 
@@ -1758,7 +1800,7 @@ class Ui_MainWindow(object):
         self.questionnaryNameLabel.setObjectName(u"questionnaryNameLabel")
         self.questionnaryNameLabel.setMinimumSize(QSize(350, 25))
         self.questionnaryNameLabel.setMaximumSize(QSize(350, 25))
-        self.questionnaryNameLabel.setFont(font2)
+        self.questionnaryNameLabel.setFont(font1)
 
         self.verticalLayout_26.addWidget(self.questionnaryNameLabel)
 
@@ -1776,7 +1818,7 @@ class Ui_MainWindow(object):
         self.questionsScrollArea.setWidgetResizable(True)
         self.questionsScrollAreaWidgetContents = QWidget()
         self.questionsScrollAreaWidgetContents.setObjectName(u"questionsScrollAreaWidgetContents")
-        self.questionsScrollAreaWidgetContents.setGeometry(QRect(0, 0, 552, 381))
+        self.questionsScrollAreaWidgetContents.setGeometry(QRect(0, 0, 376, 347))
         self.verticalLayout_29 = QVBoxLayout(self.questionsScrollAreaWidgetContents)
         self.verticalLayout_29.setSpacing(0)
         self.verticalLayout_29.setObjectName(u"verticalLayout_29")
@@ -1789,7 +1831,7 @@ class Ui_MainWindow(object):
         self.label11.setObjectName(u"label11")
         self.label11.setMinimumSize(QSize(0, 25))
         self.label11.setMaximumSize(QSize(16777215, 25))
-        self.label11.setFont(font1)
+        self.label11.setFont(font5)
 
         self.questionsVerticalLayout.addWidget(self.label11, 0, Qt.AlignLeft|Qt.AlignTop)
 
@@ -1947,7 +1989,7 @@ class Ui_MainWindow(object):
         self.label_17.setObjectName(u"label_17")
         self.label_17.setMinimumSize(QSize(110, 26))
         self.label_17.setMaximumSize(QSize(110, 26))
-        self.label_17.setFont(font1)
+        self.label_17.setFont(font5)
 
         self.questionsVerticalLayout.addWidget(self.label_17)
 
@@ -2034,7 +2076,7 @@ class Ui_MainWindow(object):
 
         self.reportsBtn.setDefault(False)
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(0)
+        self.mainPages.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2148,8 +2190,8 @@ class Ui_MainWindow(object):
         self.label_25.setText(QCoreApplication.translate("MainWindow", u" \u043f\u043e", None))
         self.clabel.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u043d\u0434\u0438\u0434\u0430\u0442", None))
         self.dlabel.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u0442\u0430 \u0438\u043d\u0442\u0435\u0440\u0432\u044c\u044e", None))
-        self.stlabel.setText(QCoreApplication.translate("MainWindow", u"\u0421", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e", None))
+        self.stlabel.setText(QCoreApplication.translate("MainWindow", u"\u0441", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u043f\u043e", None))
         self.exportBtn.setText(QCoreApplication.translate("MainWindow", u"\u042d\u043a\u0441\u043f\u043e\u0440\u0442", None))
         self.importBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043c\u043f\u043e\u0440\u0442", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u043b\u0436\u043d\u043e\u0441\u0442\u044c", None))
