@@ -11,7 +11,7 @@ a = Analysis(
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=['PySide6', 'PyQt6'],
+    excludes=['PyQt5', 'PySide2', 'PyQt6'],
     noarchive=False,
 )
 
@@ -33,7 +33,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='D:/pycharm/HiHire/Qss/icons/IconLogo.ico'
+    icon='D:/pycharm/HiHire!/Qss/icons/IconLogo.ico'
 )
 
 coll = COLLECT(

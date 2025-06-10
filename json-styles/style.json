@@ -1,5 +1,5 @@
 {
-  "QtBinding": "PyQt6",
+  "QtBinding": "PySide6",
   "ShowLogs": true,
   "LiveCompileQss": true,
   "CheckForMissingicons": false,

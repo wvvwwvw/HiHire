@@ -1,4 +1,5 @@
 import sys
+import PySide6
 from PySide6.QtWidgets import QApplication, QMessageBox, QMainWindow
 from authorization import AuthWindow
 from src.ui_interface import *
