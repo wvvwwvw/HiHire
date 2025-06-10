@@ -1,7 +1,7 @@
 from datetime import datetime
 from PySide6.QtWidgets import (QFrame, QVBoxLayout, QLabel, QPushButton, QWidget,
                                QHBoxLayout, QScrollArea, QMessageBox, QDialogButtonBox,
-                               QLineEdit, QFormLayout, QDialog, QComboBox)
+                               QLineEdit, QFormLayout, QDialog, QComboBox, QCheckBox)
 from PySide6.QtCore import Qt, Signal
 from connect_to_database import Database
 
@@ -25,6 +25,7 @@ class EmployeePage:
         self.ui.fioLineEdit.textChanged.connect(self.filter_employees)
         self.ui.eDateComboBox.currentIndexChanged.connect(self.filter_employees)
         self.ui.createUserBtn.clicked.connect(self.show_create_user_dialog)
+        self.ui.is_userLabel.mousePressEvent = lambda event: self.show_user_activation_dialog()
 
     def init_employees_page(self, user_role_id):
         """Инициализирует страницу сотрудников"""
@@ -703,3 +704,89 @@ class EmployeePage:
         else:
             self.ui.is_userLabel.setText("")
             self.ui.createUserBtn.setVisible(self.current_role_id == 1)
+
+    def show_user_activation_dialog(self):
+        """Показывает диалоговое окно активации пользователя"""
+        if not self.current_employee_id:
+            return
+
+        user_info = self.db.execute_query(
+            "SELECT is_active FROM Users WHERE employee_id = %s",
+            (self.current_employee_id,),
+            fetch_all=False
+        )
+
+        if not user_info:
+            self.main_window.show_error_message("Для этого сотрудника нет пользователя")
+            return
+
+        dialog = QDialog(self.main_window)
+        dialog.setWindowTitle("Активация пользователя")
+        dialog.setFixedSize(300, 150)
+
+        layout = QVBoxLayout(dialog)
+
+        active_checkbox = QCheckBox("Активен")
+        inactive_checkbox = QCheckBox("Не активен")
+
+        # Устанавливаем текущее состояние
+        is_active = user_info['is_active']
+        active_checkbox.setChecked(is_active)
+        inactive_checkbox.setChecked(not is_active)
+
+        def update_checkboxes(checkbox):
+            if checkbox == active_checkbox:
+                inactive_checkbox.setChecked(not checkbox.isChecked())
+            else:
+                active_checkbox.setChecked(not checkbox.isChecked())
+
+        active_checkbox.stateChanged.connect(lambda: update_checkboxes(active_checkbox))
+        inactive_checkbox.stateChanged.connect(lambda: update_checkboxes(inactive_checkbox))
+
+        checkbox_layout = QVBoxLayout()
+        checkbox_layout.addWidget(active_checkbox)
+        checkbox_layout.addWidget(inactive_checkbox)
+        layout.addLayout(checkbox_layout)
+
+        button_box = QDialogButtonBox()
+        save_button = button_box.addButton("Сохранить", QDialogButtonBox.AcceptRole)
+        cancel_button = button_box.addButton("Отмена", QDialogButtonBox.RejectRole)
+        layout.addWidget(button_box)
+
+        def save_changes():
+            try:
+                self.db.execute_query(
+                    "UPDATE Users SET is_active = %s WHERE employee_id = %s",
+                    (active_checkbox.isChecked(), self.current_employee_id),
+                    fetch_all=False
+                )
+                self.main_window.show_success_message("Статус пользователя успешно обновлен")
+                dialog.accept()
+            except Exception as e:
+                print(f"Ошибка при обновлении статуса пользователя: {e}")
+                self.main_window.show_error_message("Ошибка при обновлении статуса")
+
+        save_button.clicked.connect(save_changes)
+        cancel_button.clicked.connect(dialog.reject)
+
+        dialog.setStyleSheet(f"""
+            QDialog {{
+                background-color: {self.main_window.theme.COLOR_BACKGROUND_1};
+                color: {self.main_window.theme.COLOR_TEXT_1};
+            }}
+            QCheckBox {{
+                font-size: 12pt;
+                color: {self.main_window.theme.COLOR_TEXT_1};
+            }}
+            QPushButton {{
+                background-color: {self.main_window.theme.COLOR_ACCENT_1};
+                color: {self.main_window.theme.COLOR_TEXT_1};
+                border-radius: 5px;
+                padding: 5px;
+            }}
+            QPushButton:hover {{
+                background-color: {self.main_window.theme.COLOR_ACCENT_2};
+            }}
+        """)
+
+        dialog.exec()

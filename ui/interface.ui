@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1370</width>
-    <height>602</height>
+    <width>1110</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1024,7 +1024,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
              <item>
               <widget class="QCustomQStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>1</number>
+                <number>6</number>
                </property>
                <widget class="QWidget" name="dataAnalysPage">
                 <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1326,8 +1326,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>553</width>
-                      <height>392</height>
+                      <width>712</width>
+                      <height>408</height>
                      </rect>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_58">
@@ -1421,7 +1421,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <widget class="QWidget" name="widget_14" native="true">
                       <property name="minimumSize">
                        <size>
-                        <width>815</width>
+                        <width>840</width>
                         <height>0</height>
                        </size>
                       </property>
@@ -1500,13 +1500,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <property name="minimumSize">
                              <size>
                               <width>150</width>
-                              <height>25</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
                               <width>150</width>
-                              <height>25</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="font">
@@ -1523,123 +1523,126 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <widget class="QWidget" name="widget_15" native="true">
                          <property name="minimumSize">
                           <size>
-                           <width>700</width>
+                           <width>0</width>
                            <height>0</height>
                           </size>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_21">
                           <item>
-                           <widget class="QLabel" name="dlabel">
+                           <widget class="QWidget" name="widget_42" native="true">
                             <property name="minimumSize">
                              <size>
-                              <width>115</width>
-                              <height>20</height>
+                              <width>370</width>
+                              <height>0</height>
                              </size>
                             </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>115</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Дата интервью</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="stlabel">
-                            <property name="minimumSize">
-                             <size>
-                              <width>20</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>20</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>с</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QDateEdit" name="startDateEdit">
-                            <property name="minimumSize">
-                             <size>
-                              <width>110</width>
-                              <height>25</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>110</width>
-                              <height>25</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_18">
-                            <property name="minimumSize">
-                             <size>
-                              <width>30</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>30</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>по</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QDateEdit" name="endDateEdit">
-                            <property name="minimumSize">
-                             <size>
-                              <width>110</width>
-                              <height>25</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>110</width>
-                              <height>25</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_45">
+                             <property name="spacing">
+                              <number>2</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QLabel" name="dlabel">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>60</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>60</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>13</pointsize>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Дата c</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QDateEdit" name="startDateEdit">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>110</width>
+                                 <height>25</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>110</width>
+                                 <height>25</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                </font>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_18">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>30</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>30</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>по</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QDateEdit" name="endDateEdit">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>110</width>
+                                 <height>25</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>110</width>
+                                 <height>25</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                </font>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
                            </widget>
                           </item>
                           <item>
@@ -1936,8 +1939,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>953</width>
-                         <height>375</height>
+                         <width>707</width>
+                         <height>391</height>
                         </rect>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_40">
@@ -2140,8 +2143,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>947</width>
-                         <height>366</height>
+                         <width>712</width>
+                         <height>382</height>
                         </rect>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_38">
@@ -2926,6 +2929,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  </item>
                  <item alignment="Qt::AlignTop">
                   <widget class="QWidget" name="usersWidgets" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>550</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                    <layout class="QVBoxLayout" name="verticalLayout_21">
                     <item>
                      <widget class="QLabel" name="labelUser">
@@ -2999,6 +3008,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  </property>
                  <item alignment="Qt::AlignTop">
                   <widget class="QWidget" name="efiltersWidget" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>80</height>
+                    </size>
+                   </property>
                    <layout class="QVBoxLayout" name="verticalLayout_39">
                     <property name="spacing">
                      <number>0</number>
@@ -3013,7 +3028,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <number>0</number>
                     </property>
                     <property name="bottomMargin">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <item alignment="Qt::AlignTop">
                      <widget class="QWidget" name="widget_25" native="true">
@@ -3074,13 +3089,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <property name="minimumSize">
                           <size>
                            <width>220</width>
-                           <height>25</height>
+                           <height>30</height>
                           </size>
                          </property>
                          <property name="maximumSize">
                           <size>
                            <width>220</width>
-                           <height>25</height>
+                           <height>30</height>
                           </size>
                          </property>
                          <property name="font">
@@ -3143,7 +3158,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>0</height>
+                        <height>35</height>
                        </size>
                       </property>
                       <property name="maximumSize">
@@ -3157,8 +3172,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <widget class="QWidget" name="widget_21" native="true">
                          <property name="minimumSize">
                           <size>
-                           <width>250</width>
-                           <height>0</height>
+                           <width>265</width>
+                           <height>35</height>
                           </size>
                          </property>
                          <property name="maximumSize">
@@ -3236,7 +3251,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <property name="minimumSize">
                           <size>
                            <width>320</width>
-                           <height>0</height>
+                           <height>35</height>
                           </size>
                          </property>
                          <property name="maximumSize">
@@ -3340,8 +3355,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>947</width>
-                         <height>405</height>
+                         <width>712</width>
+                         <height>416</height>
                         </rect>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_43">
@@ -3572,6 +3587,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
                            <height>25</height>
                           </size>
                          </property>
+                         <property name="font">
+                          <font>
+                           <underline>true</underline>
+                          </font>
+                         </property>
                          <property name="text">
                           <string>hr-специалист</string>
                          </property>
@@ -3611,7 +3631,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>930</width>
+                         <width>695</width>
                          <height>487</height>
                         </rect>
                        </property>
@@ -4220,7 +4240,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <widget class="QLabel" name="label91">
                       <property name="font">
                        <font>
-                        <pointsize>17</pointsize>
+                        <pointsize>25</pointsize>
                        </font>
                       </property>
                       <property name="text">
@@ -4364,8 +4384,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>376</width>
-                         <height>347</height>
+                         <width>702</width>
+                         <height>390</height>
                         </rect>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_29">

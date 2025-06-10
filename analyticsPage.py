@@ -15,7 +15,6 @@ class AnalyticsPage:
         self.user_id = None
         self.role_id = None
 
-        self.init_filters()
         self.connect_filter_signals()
         self.init_charts()
 
@@ -27,8 +26,10 @@ class AnalyticsPage:
         self.ui.dateEdit_2.dateChanged.connect(self.update_charts)
 
     def init_analytic(self, role_id, user_id):
+        """Инициализирует страницу аналитики"""
         self.role_id = role_id
         self.user_id = user_id
+        self.init_filters()
         self.update_charts()
 
     def init_filters(self):
@@ -39,7 +40,7 @@ class AnalyticsPage:
         for position in positions:
             self.ui.comboBox.addItem(position['name'], position['id'])
 
-        questionnaires = self.db.execute_query("SELECT id, title FROM Questionnaires")
+        questionnaires = self.db.execute_query("SELECT id, title FROM Questionnaires WHERE created_by = %s OR is_public = 1", (self.user_id,))
         self.ui.comboBox_2.clear()
         self.ui.comboBox_2.addItem("Все шаблоны", None)
         for q in questionnaires:

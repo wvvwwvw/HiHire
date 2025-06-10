@@ -40,7 +40,6 @@ class AuthWindow(QMainWindow):
 
         layout = QVBoxLayout()
 
-        # Поля формы
         self.recovery_login_label = QLabel("Логин:")
         self.recovery_login_edit = QLineEdit()
 
@@ -58,7 +57,6 @@ class AuthWindow(QMainWindow):
         self.recovery_submit_btn = QPushButton("Сбросить пароль")
         self.recovery_submit_btn.clicked.connect(self.handle_password_reset)
 
-        # Добавление элементов в layout
         layout.addWidget(self.recovery_login_label)
         layout.addWidget(self.recovery_login_edit)
         layout.addWidget(self.recovery_email_label)
@@ -122,38 +120,37 @@ class AuthWindow(QMainWindow):
             QMessageBox.warning(self, "Ошибка", "Заполните все поля!")
             return
 
-        result = self.check_credentials(login, password)
-        if result:
-            user_id, role_id = result
+        user_id, role_id, message = self.check_credentials(login, password)
+
+        if user_id and role_id:
+            QMessageBox.information(self, "Успех", message)
             self.authorized.emit(user_id, role_id)
             self.close()
         else:
-            QMessageBox.critical(self, "Ошибка", "Неверный логин или пароль")
+            QMessageBox.critical(self, "Ошибка", message)
 
     def check_credentials(self, login: str, password: str):
-        """Проверка учетных данных с более строгой проверкой"""
+        """Проверка учетных данных"""
         try:
             cursor = self.db.connection.cursor(dictionary=True)
             cursor.callproc('AuthenticateUser', (login, password))
 
-            results = []
+            result_data = None
             for result in cursor.stored_results():
-                results.append(result.fetchone())
+                result_data = result.fetchone()
 
             cursor.close()
 
-            if results and len(results) > 0:
-                auth_result = results[0]
-                if auth_result and auth_result.get('id') is not None and auth_result.get('role_id') is not None:
-                    return auth_result['id'], auth_result['role_id']
+            if result_data:
+                return result_data.get('id'), result_data.get('role_id'), result_data.get('message')
 
-            return None
+            return None, None, "Не удалось получить ответ от сервера."
 
         except Exception as err:
             print(f"Ошибка аутентификации: {err}")
             if 'cursor' in locals() and cursor:
                 cursor.close()
-            return None
+            return None, None, f"Ошибка подключения к БД: {err}"
 
     def loadUbuntuFont(self):
         """Загружаем и применяем шрифт для текста"""

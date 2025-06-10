@@ -80,7 +80,7 @@ class QuestionsPage:
         """Создает карточку шаблона анкеты"""
         frame = QFrame()
         frame.setMinimumSize(0, 150)
-        frame.setMaximumSize(250, 150)
+        frame.setMaximumSize(450, 350)
         frame.setFrameShape(QFrame.StyledPanel)
         frame.setFrameShadow(QFrame.Raised)
         frame.setStyleSheet(self.get_template_card_style())
@@ -122,7 +122,7 @@ class QuestionsPage:
         title_label = QLabel(template['title'])
         title_label.setWordWrap(True)
         title_label.setMinimumHeight(90)
-        title_label.setStyleSheet("font-size:12pt; background: transparent;")
+        title_label.setStyleSheet("font-size:15pt; background: transparent;")
         top_row_layout.addWidget(title_label, 1)
 
         if self.role_id == 1:
@@ -158,7 +158,7 @@ class QuestionsPage:
         """Добавляет подвал карточки шаблона"""
         max_score = self.db.get_max_score_for_questionnaire(template['id'])
         score_label = QLabel(f"Макс. баллов: {max_score}")
-        score_label.setStyleSheet("font-size:9pt; background: transparent;")
+        score_label.setStyleSheet("font-size:11pt; background: transparent;")
         layout.addWidget(score_label, 0, Qt.AlignLeft | Qt.AlignBottom)
 
     def delete_template(self, template):
@@ -230,6 +230,9 @@ class QuestionsPage:
         self.ui.questionnaryNameLabel.setStyleSheet("font-size:15pt;")
         self.load_questions(questionnaire['id'])
         self.ui.mainPages.setCurrentWidget(self.ui.questionnaryPage)
+
+        self.ui.cPhoneLineEdit.setPlaceholderText("+7 (___) ___-__-__")
+        self.ui.cPhoneLineEdit.setInputMask("+7 (000) 000-00-00;_")
 
     def load_questions(self, questionnaire_id):
         """Загружает вопросы анкеты"""
