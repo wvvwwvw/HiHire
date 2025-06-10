@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1370, 602)
+        MainWindow.resize(1110, 618)
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -571,7 +571,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 553, 392))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 712, 408))
         self.verticalLayout_58 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_58.setSpacing(0)
         self.verticalLayout_58.setObjectName(u"verticalLayout_58")
@@ -605,7 +605,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_50.setContentsMargins(0, 0, 0, 0)
         self.widget_14 = QWidget(self.filtersWidget)
         self.widget_14.setObjectName(u"widget_14")
-        self.widget_14.setMinimumSize(QSize(815, 0))
+        self.widget_14.setMinimumSize(QSize(840, 0))
         self.horizontalLayout_20 = QHBoxLayout(self.widget_14)
         self.horizontalLayout_20.setSpacing(0)
         self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
@@ -628,8 +628,8 @@ class Ui_MainWindow(object):
 
         self.candidateLineEdit = QLineEdit(self.widget_16)
         self.candidateLineEdit.setObjectName(u"candidateLineEdit")
-        self.candidateLineEdit.setMinimumSize(QSize(150, 25))
-        self.candidateLineEdit.setMaximumSize(QSize(150, 25))
+        self.candidateLineEdit.setMinimumSize(QSize(150, 30))
+        self.candidateLineEdit.setMaximumSize(QSize(150, 30))
         self.candidateLineEdit.setFont(font1)
 
         self.horizontalLayout_22.addWidget(self.candidateLineEdit)
@@ -639,48 +639,52 @@ class Ui_MainWindow(object):
 
         self.widget_15 = QWidget(self.widget_14)
         self.widget_15.setObjectName(u"widget_15")
-        self.widget_15.setMinimumSize(QSize(700, 0))
+        self.widget_15.setMinimumSize(QSize(0, 0))
         self.horizontalLayout_21 = QHBoxLayout(self.widget_15)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
-        self.dlabel = QLabel(self.widget_15)
+        self.widget_42 = QWidget(self.widget_15)
+        self.widget_42.setObjectName(u"widget_42")
+        self.widget_42.setMinimumSize(QSize(370, 0))
+        self.horizontalLayout_45 = QHBoxLayout(self.widget_42)
+        self.horizontalLayout_45.setSpacing(2)
+        self.horizontalLayout_45.setObjectName(u"horizontalLayout_45")
+        self.horizontalLayout_45.setContentsMargins(0, 0, 0, 0)
+        self.dlabel = QLabel(self.widget_42)
         self.dlabel.setObjectName(u"dlabel")
-        self.dlabel.setMinimumSize(QSize(115, 20))
-        self.dlabel.setMaximumSize(QSize(115, 20))
-        self.dlabel.setFont(font1)
+        self.dlabel.setMinimumSize(QSize(60, 20))
+        self.dlabel.setMaximumSize(QSize(60, 20))
+        font6 = QFont()
+        font6.setPointSize(13)
+        self.dlabel.setFont(font6)
 
-        self.horizontalLayout_21.addWidget(self.dlabel)
+        self.horizontalLayout_45.addWidget(self.dlabel)
 
-        self.stlabel = QLabel(self.widget_15)
-        self.stlabel.setObjectName(u"stlabel")
-        self.stlabel.setMinimumSize(QSize(20, 20))
-        self.stlabel.setMaximumSize(QSize(20, 20))
-        self.stlabel.setFont(font1)
-
-        self.horizontalLayout_21.addWidget(self.stlabel)
-
-        self.startDateEdit = QDateEdit(self.widget_15)
+        self.startDateEdit = QDateEdit(self.widget_42)
         self.startDateEdit.setObjectName(u"startDateEdit")
         self.startDateEdit.setMinimumSize(QSize(110, 25))
         self.startDateEdit.setMaximumSize(QSize(110, 25))
         self.startDateEdit.setFont(font1)
 
-        self.horizontalLayout_21.addWidget(self.startDateEdit)
+        self.horizontalLayout_45.addWidget(self.startDateEdit)
 
-        self.label_18 = QLabel(self.widget_15)
+        self.label_18 = QLabel(self.widget_42)
         self.label_18.setObjectName(u"label_18")
         self.label_18.setMinimumSize(QSize(30, 20))
         self.label_18.setMaximumSize(QSize(30, 20))
         self.label_18.setFont(font1)
 
-        self.horizontalLayout_21.addWidget(self.label_18)
+        self.horizontalLayout_45.addWidget(self.label_18)
 
-        self.endDateEdit = QDateEdit(self.widget_15)
+        self.endDateEdit = QDateEdit(self.widget_42)
         self.endDateEdit.setObjectName(u"endDateEdit")
         self.endDateEdit.setMinimumSize(QSize(110, 25))
         self.endDateEdit.setMaximumSize(QSize(110, 25))
         self.endDateEdit.setFont(font1)
 
-        self.horizontalLayout_21.addWidget(self.endDateEdit)
+        self.horizontalLayout_45.addWidget(self.endDateEdit)
+
+
+        self.horizontalLayout_21.addWidget(self.widget_42)
 
         self.widget_39 = QWidget(self.widget_15)
         self.widget_39.setObjectName(u"widget_39")
@@ -794,7 +798,7 @@ class Ui_MainWindow(object):
         self.candidatesSscrollArea.setWidgetResizable(True)
         self.candidatesScrollAreaWidgetContents = QWidget()
         self.candidatesScrollAreaWidgetContents.setObjectName(u"candidatesScrollAreaWidgetContents")
-        self.candidatesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 953, 375))
+        self.candidatesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 707, 391))
         self.verticalLayout_40 = QVBoxLayout(self.candidatesScrollAreaWidgetContents)
         self.verticalLayout_40.setSpacing(5)
         self.verticalLayout_40.setObjectName(u"verticalLayout_40")
@@ -846,9 +850,9 @@ class Ui_MainWindow(object):
         self.candidateLabel.setObjectName(u"candidateLabel")
         self.candidateLabel.setMinimumSize(QSize(350, 25))
         self.candidateLabel.setMaximumSize(QSize(350, 25))
-        font6 = QFont()
-        font6.setPointSize(16)
-        self.candidateLabel.setFont(font6)
+        font7 = QFont()
+        font7.setPointSize(16)
+        self.candidateLabel.setFont(font7)
 
         self.verticalLayout_35.addWidget(self.candidateLabel)
 
@@ -888,7 +892,7 @@ class Ui_MainWindow(object):
         self.candidatScrollArea.setWidgetResizable(True)
         self.candidateScrollAreaWidgetContents = QWidget()
         self.candidateScrollAreaWidgetContents.setObjectName(u"candidateScrollAreaWidgetContents")
-        self.candidateScrollAreaWidgetContents.setGeometry(QRect(0, 0, 947, 366))
+        self.candidateScrollAreaWidgetContents.setGeometry(QRect(0, 0, 712, 382))
         self.verticalLayout_38 = QVBoxLayout(self.candidateScrollAreaWidgetContents)
         self.verticalLayout_38.setSpacing(0)
         self.verticalLayout_38.setObjectName(u"verticalLayout_38")
@@ -905,9 +909,9 @@ class Ui_MainWindow(object):
         self.candidateFIOLabel.setObjectName(u"candidateFIOLabel")
         self.candidateFIOLabel.setMinimumSize(QSize(300, 40))
         self.candidateFIOLabel.setMaximumSize(QSize(16777215, 40))
-        font7 = QFont()
-        font7.setPointSize(20)
-        self.candidateFIOLabel.setFont(font7)
+        font8 = QFont()
+        font8.setPointSize(20)
+        self.candidateFIOLabel.setFont(font8)
 
         self.verticalLayout_61.addWidget(self.candidateFIOLabel)
 
@@ -1128,9 +1132,9 @@ class Ui_MainWindow(object):
         self.labelSys.setObjectName(u"labelSys")
         self.labelSys.setMinimumSize(QSize(0, 25))
         self.labelSys.setMaximumSize(QSize(16777215, 25))
-        font8 = QFont()
-        font8.setPointSize(17)
-        self.labelSys.setFont(font8)
+        font9 = QFont()
+        font9.setPointSize(17)
+        self.labelSys.setFont(font9)
 
         self.verticalLayout_20.addWidget(self.labelSys)
 
@@ -1226,13 +1230,14 @@ class Ui_MainWindow(object):
 
         self.usersWidgets = QWidget(self.questionsPage)
         self.usersWidgets.setObjectName(u"usersWidgets")
+        self.usersWidgets.setMinimumSize(QSize(550, 0))
         self.verticalLayout_21 = QVBoxLayout(self.usersWidgets)
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
         self.labelUser = QLabel(self.usersWidgets)
         self.labelUser.setObjectName(u"labelUser")
         self.labelUser.setMinimumSize(QSize(310, 25))
         self.labelUser.setMaximumSize(QSize(310, 25))
-        self.labelUser.setFont(font8)
+        self.labelUser.setFont(font9)
 
         self.verticalLayout_21.addWidget(self.labelUser)
 
@@ -1257,10 +1262,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
         self.efiltersWidget = QWidget(self.employeesPage)
         self.efiltersWidget.setObjectName(u"efiltersWidget")
+        self.efiltersWidget.setMinimumSize(QSize(0, 80))
         self.verticalLayout_39 = QVBoxLayout(self.efiltersWidget)
         self.verticalLayout_39.setSpacing(0)
         self.verticalLayout_39.setObjectName(u"verticalLayout_39")
-        self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_39.setContentsMargins(0, 0, 0, 5)
         self.widget_25 = QWidget(self.efiltersWidget)
         self.widget_25.setObjectName(u"widget_25")
         self.widget_25.setMinimumSize(QSize(800, 0))
@@ -1279,8 +1285,8 @@ class Ui_MainWindow(object):
 
         self.fioLineEdit = QLineEdit(self.widget_25)
         self.fioLineEdit.setObjectName(u"fioLineEdit")
-        self.fioLineEdit.setMinimumSize(QSize(220, 25))
-        self.fioLineEdit.setMaximumSize(QSize(220, 25))
+        self.fioLineEdit.setMinimumSize(QSize(220, 30))
+        self.fioLineEdit.setMaximumSize(QSize(220, 30))
         self.fioLineEdit.setFont(font1)
 
         self.horizontalLayout_31.addWidget(self.fioLineEdit)
@@ -1306,13 +1312,13 @@ class Ui_MainWindow(object):
 
         self.widget_24 = QWidget(self.efiltersWidget)
         self.widget_24.setObjectName(u"widget_24")
-        self.widget_24.setMinimumSize(QSize(0, 0))
+        self.widget_24.setMinimumSize(QSize(0, 35))
         self.widget_24.setMaximumSize(QSize(800, 48))
         self.horizontalLayout_32 = QHBoxLayout(self.widget_24)
         self.horizontalLayout_32.setObjectName(u"horizontalLayout_32")
         self.widget_21 = QWidget(self.widget_24)
         self.widget_21.setObjectName(u"widget_21")
-        self.widget_21.setMinimumSize(QSize(250, 0))
+        self.widget_21.setMinimumSize(QSize(265, 35))
         self.widget_21.setMaximumSize(QSize(16777215, 16777215))
         self.horizontalLayout_28 = QHBoxLayout(self.widget_21)
         self.horizontalLayout_28.setSpacing(0)
@@ -1339,7 +1345,7 @@ class Ui_MainWindow(object):
 
         self.widget_40 = QWidget(self.widget_24)
         self.widget_40.setObjectName(u"widget_40")
-        self.widget_40.setMinimumSize(QSize(320, 0))
+        self.widget_40.setMinimumSize(QSize(320, 35))
         self.widget_40.setMaximumSize(QSize(16777215, 16777215))
         self.horizontalLayout_48 = QHBoxLayout(self.widget_40)
         self.horizontalLayout_48.setObjectName(u"horizontalLayout_48")
@@ -1380,7 +1386,7 @@ class Ui_MainWindow(object):
         self.employeesScrollArea.setWidgetResizable(True)
         self.employeesScrollAreaWidgetContents = QWidget()
         self.employeesScrollAreaWidgetContents.setObjectName(u"employeesScrollAreaWidgetContents")
-        self.employeesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 947, 405))
+        self.employeesScrollAreaWidgetContents.setGeometry(QRect(0, 0, 712, 416))
         self.verticalLayout_43 = QVBoxLayout(self.employeesScrollAreaWidgetContents)
         self.verticalLayout_43.setSpacing(6)
         self.verticalLayout_43.setObjectName(u"verticalLayout_43")
@@ -1428,9 +1434,9 @@ class Ui_MainWindow(object):
         self.label57.setObjectName(u"label57")
         self.label57.setMinimumSize(QSize(250, 35))
         self.label57.setMaximumSize(QSize(250, 35))
-        font9 = QFont()
-        font9.setPointSize(15)
-        self.label57.setFont(font9)
+        font10 = QFont()
+        font10.setPointSize(15)
+        self.label57.setFont(font10)
 
         self.verticalLayout_44.addWidget(self.label57)
 
@@ -1474,6 +1480,9 @@ class Ui_MainWindow(object):
         self.is_userLabel.setObjectName(u"is_userLabel")
         self.is_userLabel.setMinimumSize(QSize(0, 25))
         self.is_userLabel.setMaximumSize(QSize(80, 25))
+        font11 = QFont()
+        font11.setUnderline(True)
+        self.is_userLabel.setFont(font11)
 
         self.verticalLayout_45.addWidget(self.is_userLabel, 0, Qt.AlignRight|Qt.AlignVCenter)
 
@@ -1494,7 +1503,7 @@ class Ui_MainWindow(object):
         self.employeeScrollArea.setWidgetResizable(True)
         self.employeeScrollAreaWidgetContents = QWidget()
         self.employeeScrollAreaWidgetContents.setObjectName(u"employeeScrollAreaWidgetContents")
-        self.employeeScrollAreaWidgetContents.setGeometry(QRect(0, 0, 930, 487))
+        self.employeeScrollAreaWidgetContents.setGeometry(QRect(0, 0, 695, 487))
         self.verticalLayout_48 = QVBoxLayout(self.employeeScrollAreaWidgetContents)
         self.verticalLayout_48.setSpacing(0)
         self.verticalLayout_48.setObjectName(u"verticalLayout_48")
@@ -1765,7 +1774,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_31.setObjectName(u"verticalLayout_31")
         self.label91 = QLabel(self.widget_41)
         self.label91.setObjectName(u"label91")
-        self.label91.setFont(font8)
+        font12 = QFont()
+        font12.setPointSize(25)
+        self.label91.setFont(font12)
 
         self.verticalLayout_31.addWidget(self.label91)
 
@@ -1818,7 +1829,7 @@ class Ui_MainWindow(object):
         self.questionsScrollArea.setWidgetResizable(True)
         self.questionsScrollAreaWidgetContents = QWidget()
         self.questionsScrollAreaWidgetContents.setObjectName(u"questionsScrollAreaWidgetContents")
-        self.questionsScrollAreaWidgetContents.setGeometry(QRect(0, 0, 376, 347))
+        self.questionsScrollAreaWidgetContents.setGeometry(QRect(0, 0, 702, 390))
         self.verticalLayout_29 = QVBoxLayout(self.questionsScrollAreaWidgetContents)
         self.verticalLayout_29.setSpacing(0)
         self.verticalLayout_29.setObjectName(u"verticalLayout_29")
@@ -2076,7 +2087,7 @@ class Ui_MainWindow(object):
 
         self.reportsBtn.setDefault(False)
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(1)
+        self.mainPages.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2189,8 +2200,7 @@ class Ui_MainWindow(object):
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0440\u0438\u043e\u0434 \u0441 ", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u" \u043f\u043e", None))
         self.clabel.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u043d\u0434\u0438\u0434\u0430\u0442", None))
-        self.dlabel.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u0442\u0430 \u0438\u043d\u0442\u0435\u0440\u0432\u044c\u044e", None))
-        self.stlabel.setText(QCoreApplication.translate("MainWindow", u"\u0441", None))
+        self.dlabel.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u0442\u0430 c", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u043f\u043e", None))
         self.exportBtn.setText(QCoreApplication.translate("MainWindow", u"\u042d\u043a\u0441\u043f\u043e\u0440\u0442", None))
         self.importBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043c\u043f\u043e\u0440\u0442", None))
