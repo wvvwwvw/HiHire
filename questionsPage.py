@@ -368,6 +368,7 @@ class QuestionsPage:
         dialog = AddQuestionnaireDialog(self.db, self.user_id, self.role_id, self.main_window)
         if dialog.exec() == QDialog.Accepted:
             self.load_user_templates()
+            self.bind_system_templates()
             self.main_window.show_success_message("Шаблон успешно создан!")
 
     def clear_layout(self, layout):
