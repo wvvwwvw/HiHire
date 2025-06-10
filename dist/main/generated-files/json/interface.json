@@ -1,0 +1,126 @@
+{
+  "QPushButton": [
+    {
+      "name": "menuBtn",
+      "icon": "Qss/icons/icons/feather/menu.png"
+    },
+    {
+      "name": "questionsBtn",
+      "icon": "Qss/icons/icons/feather/file-plus.png"
+    },
+    {
+      "name": "reportsBtn",
+      "icon": "Qss/icons/icons/feather/archive.png"
+    },
+    {
+      "name": "workersBtn",
+      "icon": "Qss/icons/icons/feather/users.png"
+    },
+    {
+      "name": "analysisBtn",
+      "icon": "Qss/icons/icons/feather/pie-chart.png"
+    },
+    {
+      "name": "prifileBtn",
+      "icon": "Qss/icons/icons/feather/user.png"
+    },
+    {
+      "name": "settingsBtn",
+      "icon": "Qss/icons/icons/feather/settings.png"
+    },
+    {
+      "name": "helpBtn",
+      "icon": "Qss/icons/icons/feather/help-circle.png"
+    },
+    {
+      "name": "infoBtn",
+      "icon": "Qss/icons/icons/feather/info.png"
+    },
+    {
+      "name": "closeLeftMenuBtn",
+      "icon": "Qss/icons/icons/feather/x-circle.png"
+    },
+    {
+      "name": "wrapBtn",
+      "icon": "Qss/icons/icons/feather/window_minimize.png"
+    },
+    {
+      "name": "changeWinBtn",
+      "icon": "Qss/icons/icons/feather/square.png"
+    },
+    {
+      "name": "closeBtn",
+      "icon": "Qss/icons/icons/feather/x.png"
+    },
+    {
+      "name": "exportBtn",
+      "icon": "Qss/icons/icons/feather/arrow-down-circle.png"
+    },
+    {
+      "name": "importBtn",
+      "icon": "Qss/icons/icons/feather/arrow-up-circle.png"
+    },
+    {
+      "name": "exitFromCandidateBtn",
+      "icon": "Qss/icons/icons/feather/corner-up-left.png"
+    },
+    {
+      "name": "rejectBtn",
+      "icon": "Qss/icons/icons/feather/thumbs-down.png"
+    },
+    {
+      "name": "acceptBtn",
+      "icon": "Qss/icons/icons/feather/thumbs-up.png"
+    },
+    {
+      "name": "disagreeBtn",
+      "icon": "Qss/icons/icons/feather/user-minus.png"
+    },
+    {
+      "name": "agreeBtn",
+      "icon": "Qss/icons/icons/feather/user-check.png"
+    },
+    {
+      "name": "addQuestionaryBtn",
+      "icon": "Qss/icons/icons/font_awesome/regular/square-plus.png"
+    },
+    {
+      "name": "exitFromEmployeeBtn",
+      "icon": "Qss/icons/icons/feather/corner-up-left.png"
+    },
+    {
+      "name": "createUserBtn",
+      "icon": "Qss/icons/icons/feather/user.png"
+    },
+    {
+      "name": "esaveChangesBtn",
+      "icon": "Qss/icons/icons/feather/save.png"
+    },
+    {
+      "name": "firedBtn",
+      "icon": "Qss/icons/icons/feather/user-minus.png"
+    },
+    {
+      "name": "vacationBtn",
+      "icon": "Qss/icons/icons/feather/map.png"
+    },
+    {
+      "name": "workingBtn",
+      "icon": "Qss/icons/icons/feather/user-check.png"
+    },
+    {
+      "name": "exitFromQuestionBtn",
+      "icon": "Qss/icons/icons/feather/corner-up-left.png"
+    },
+    {
+      "name": "saveQuestionsBtn",
+      "icon": "Qss/icons/icons/feather/save.png"
+    }
+  ],
+  "QLabel": [
+    {
+      "name": "logoPic",
+      "pixmap": "D:\\pycharm\\HiHire!\\Qss\\icons\\logo.png"
+    }
+  ]
+}

@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+ <class>ProfileWindow</class>
+ <widget class="QMainWindow" name="ProfileWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true" />
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>602</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="leftMenuP" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true" />
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QWidget" name="back" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>46</width>
+           <height>42</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>1</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QFrame" name="frame">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+              <widget class="QLabel" name="profilePic">
+               <property name="minimumSize">
+                <size>
+                 <width>140</width>
+                 <height>140</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>140</width>
+                 <height>140</height>
+                </size>
+               </property>
+               <property name="text">
+                <string />
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QWidget" name="widget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="roleLabel">
+               <property name="text">
+                <string>Admin</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="organizationLabel">
+               <property name="text">
+                <string>ООО "Большая Тройка"</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="fioLabel">
+               <property name="text">
+                <string>Abramtsova Violetta</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="exitBtn">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>    Выход  </string>
+            </property>
+            <property name="icon">
+             <iconset resource="../Qss/icons/_icons.qrc">
+              <normaloff>:/feather/icons/feather/log-out.png</normaloff>:/feather/icons/feather/log-out.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="leftBody" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignTop">
+        <widget class="QWidget" name="headerProfile" native="true">
+         <property name="maximumSize">
+          <size>
+           <width>550</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true" />
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item alignment="Qt::AlignRight">
+           <widget class="QWidget" name="logoWidget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <property name="spacing">
+              <number>5</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item alignment="Qt::AlignBottom">
+              <widget class="QLabel" name="logoPic">
+               <property name="maximumSize">
+                <size>
+                 <width>45</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="sizeIncrement">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string />
+               </property>
+               <property name="pixmap">
+                <pixmap>../Qss/icons/logo.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <property name="indent">
+                <number>-1</number>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft|Qt::AlignTop">
+              <widget class="QLabel" name="logoName">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Bahnschrift SemiBold</family>
+                 <pointsize>20</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>HiHire B3</string>
+               </property>
+               <property name="margin">
+                <number>5</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignRight|Qt::AlignTop">
+           <widget class="QFrame" name="winBtnsWidgetP">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="closeBtnP">
+               <property name="toolTip">
+                <string>Закрыть</string>
+               </property>
+               <property name="text">
+                <string />
+               </property>
+               <property name="icon">
+                <iconset resource="../Qss/icons/_icons.qrc">
+                 <normaloff>:/feather/icons/feather/x.png</normaloff>:/feather/icons/feather/x.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignTop">
+        <widget class="QWidget" name="mainContentsProfile" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item alignment="Qt::AlignVCenter">
+           <widget class="QWidget" name="mainProfileCont" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>460</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>35</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>65</number>
+             </property>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QWidget" name="firstnameWidget" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Имя</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="firstnameLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QWidget" name="lastnameWidget" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <widget class="QLabel" name="label_6">
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Фамилия</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lastnameLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QWidget" name="patronimicWidget" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QLabel" name="label_7">
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>80</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>При наличии</string>
+                  </property>
+                  <property name="text">
+                   <string>Отчество*</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="patronimicLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QWidget" name="widget_5" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QLabel" name="label8">
+                  <property name="minimumSize">
+                   <size>
+                    <width>85</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>85</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="sizeIncrement">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Телефон</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="phoneLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft|Qt::AlignTop">
+              <widget class="QWidget" name="widget_6" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>360</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <item>
+                 <widget class="QLabel" name="label_9">
+                  <property name="minimumSize">
+                   <size>
+                    <width>85</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>85</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Email</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="emailLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QWidget" name="orgWidget" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>480</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>480</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_8">
+                  <property name="minimumSize">
+                   <size>
+                    <width>85</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>85</width>
+                    <height>80</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Организация</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="organizationComboBox">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QWidget" name="operationsBtns" native="true">
+         <property name="maximumSize">
+          <size>
+           <width>800</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignRight">
+           <widget class="QWidget" name="widget_3" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>45</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="saveBtn">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>120</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>   Сохранить</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../Qss/icons/_icons.qrc">
+                 <normaloff>:/feather/icons/feather/save.png</normaloff>:/feather/icons/feather/save.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <connections />
+<customwidgets><customwidget><class>QPushButton</class><extends>QPushButton</extends><header location="global">Custom_Widgets.Theme.h</header><container>1</container></customwidget><customwidget><class>QLabel</class><extends>QLabel</extends><header location="global">Custom_Widgets.Theme.h</header><container>1</container></customwidget></customwidgets></ui>

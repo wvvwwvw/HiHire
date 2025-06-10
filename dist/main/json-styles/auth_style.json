@@ -1,0 +1,76 @@
+{
+  "QtBinding": "PySide6",
+  "ShowLogs": true,
+  "LiveCompileQss": true,
+  "CheckForMissingicons": true,
+  "QMainWindow": [
+    {
+      "tittle": "AuthWindow",
+      "frameless": true,
+      "ignoreMissingElements": true,
+      "transluscentBg": true,
+      "navigation": [
+        {
+          "minimize": "wrapBtn",
+          "close": "closeBtn",
+          "moveWindow": "header",
+          "titleBar": "header"
+        }
+      ]
+    }
+  ],
+  "QPushButton#loginBtn": {
+    "Background-color": "#13aed3",
+    "Color": "#000000",
+    "Border-radius": "5px"
+  },
+  "QLineEdit": {
+    "Border": "1px solid #addbf3",
+    "Border-radius": "5px",
+    "Padding": "5px"
+  },
+  "QSettings": [
+    {
+      "ThemeSettings": [
+        {
+          "CustomTheme": [
+            {
+              "Background-color": "#ffffff",
+              "Text-color": "#010000",
+              "Icons-color": "#000000",
+              "Accent-color": "#addbf3",
+              "Theme-name": "LightBlue",
+              "Default-Theme": true
+            },
+            {
+              "Background-color": "#1f2528",
+              "Text-color": "#fefefe",
+              "Icons-color": "#fefefe",
+              "Accent-color": "#13aed3",
+              "Theme-name": "DarkBlue",
+              "Default-Theme": false
+            }
+          ]
+        }
+      ],
+      "AppSettings": {
+        "OrginizationName": "HiHire",
+        "ApplicationName": "B3",
+        "OrginizationDormain": "HiHire.org"
+      }
+    }
+  ],
+  "QPushButtonGroup": [
+    {
+      "Buttons": [
+        "seeBtn"
+      ],
+      "Style": [
+        {
+          "Active": "QPushButton{background-color: transparent; font-weight: normal; border-top: 2px solid transparent; border-left: 3px solid transparent;border-bottom: 3px solid transparent;}",
+          "NotActive": "QPushButton{background-color: transparent; font-weight: normal; border-top: 2px solid transparent; border-left: 3px solid transparent;border-bottom: 3px solid transparent;}"
+        }
+      ]
+    }
+  ]
+}

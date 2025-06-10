@@ -1,0 +1,53 @@
+{
+  "QtBinding": "PySide6",
+  "ShowLogs": true,
+  "LiveCompileQss": true,
+  "CheckForMissingicons": false,
+  "QMainWindow": [
+    {
+      "tittle": "ProfileWindow",
+      "frameless": true,
+      "transluscentBg": true,
+      "navigation": [
+        {
+          "minimize": "wrapBtnP",
+          "close": "closeBtnP",
+          "moveWindow": "headerProfile",
+          "titleBar": "headerProfile"
+        }
+      ]
+    }
+  ],
+  "QSettings": [
+    {
+      "ThemeSettings": [
+        {
+          "CustomTheme": [
+            {
+              "Background-color": "#ffffff",
+              "Text-color": "#010000",
+              "Icons-color": "#000000",
+              "Accent-color": "#addbf3",
+              "Theme-name": "LightBlue",
+              "Default-Theme": true
+            },
+            {
+              "Background-color": "#1f2528",
+              "Text-color": "#fefefe",
+              "Icons-color": "#fefefe",
+              "Accent-color": "#13aed3",
+              "Theme-name": "DarkBlue",
+              "Default-Theme": false
+            }
+          ]
+        }
+      ],
+      "AppSettings": {
+        "OrginizationName": "HiHire",
+        "ApplicationName": "B3",
+        "OrginizationDormain": "HiHire.org"
+      }
+    },
+    }
+  ]
+}

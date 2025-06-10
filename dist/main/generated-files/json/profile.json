@@ -1,0 +1,22 @@
+{
+  "QPushButton": [
+    {
+      "name": "exitBtn",
+      "icon": "Qss/icons/icons/feather/log-out.png"
+    },
+    {
+      "name": "closeBtnP",
+      "icon": "Qss/icons/icons/feather/x.png"
+    },
+    {
+      "name": "saveBtn",
+      "icon": "Qss/icons/icons/feather/save.png"
+    }
+  ],
+  "QLabel": [
+    {
+      "name": "logoPic",
+      "pixmap": "D:\\pycharm\\HiHire\\Qss\\icons\\logo.png"
+    }
+  ]
+}
