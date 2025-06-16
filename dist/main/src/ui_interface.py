@@ -1230,16 +1230,26 @@ class Ui_MainWindow(object):
 
         self.usersWidgets = QWidget(self.questionsPage)
         self.usersWidgets.setObjectName(u"usersWidgets")
-        self.usersWidgets.setMinimumSize(QSize(550, 0))
+        self.usersWidgets.setMinimumSize(QSize(720, 0))
         self.verticalLayout_21 = QVBoxLayout(self.usersWidgets)
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
-        self.labelUser = QLabel(self.usersWidgets)
+        self.widget_44 = QWidget(self.usersWidgets)
+        self.widget_44.setObjectName(u"widget_44")
+        self.widget_44.setMinimumSize(QSize(330, 0))
+        self.horizontalLayout_46 = QHBoxLayout(self.widget_44)
+        self.horizontalLayout_46.setSpacing(0)
+        self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
+        self.horizontalLayout_46.setContentsMargins(0, 0, 0, 0)
+        self.labelUser = QLabel(self.widget_44)
         self.labelUser.setObjectName(u"labelUser")
-        self.labelUser.setMinimumSize(QSize(310, 25))
+        self.labelUser.setMinimumSize(QSize(320, 25))
         self.labelUser.setMaximumSize(QSize(310, 25))
         self.labelUser.setFont(font9)
 
-        self.verticalLayout_21.addWidget(self.labelUser)
+        self.horizontalLayout_46.addWidget(self.labelUser)
+
+
+        self.verticalLayout_21.addWidget(self.widget_44, 0, Qt.AlignLeft)
 
         self.usersTemplates = QWidget(self.usersWidgets)
         self.usersTemplates.setObjectName(u"usersTemplates")
