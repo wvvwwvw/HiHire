@@ -2931,36 +2931,63 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <widget class="QWidget" name="usersWidgets" native="true">
                    <property name="minimumSize">
                     <size>
-                     <width>550</width>
+                     <width>720</width>
                      <height>0</height>
                     </size>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_21">
-                    <item>
-                     <widget class="QLabel" name="labelUser">
+                    <item alignment="Qt::AlignLeft">
+                     <widget class="QWidget" name="widget_44" native="true">
                       <property name="minimumSize">
                        <size>
-                        <width>310</width>
-                        <height>25</height>
+                        <width>330</width>
+                        <height>0</height>
                        </size>
                       </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>310</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>17</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Не более 3</string>
-                      </property>
-                      <property name="text">
-                       <string>Пользовательские шаблоны</string>
-                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_46">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="labelUser">
+                         <property name="minimumSize">
+                          <size>
+                           <width>320</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>310</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>17</pointsize>
+                          </font>
+                         </property>
+                         <property name="toolTip">
+                          <string>Не более 3</string>
+                         </property>
+                         <property name="text">
+                          <string>Пользовательские шаблоны</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                     <item alignment="Qt::AlignTop">

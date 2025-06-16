@@ -370,56 +370,41 @@ class EmployeePage:
 
         self.ui.employeeNameLineEdit.setText(
             f"{employee['first_name']} {employee['last_name']} {employee['patronimic'] or ''}")
-        self.ui.employeePositionComboBox.clear()
 
+        self.ui.employeePositionComboBox.clear()
         positions = self.db.execute_query("SELECT id, name FROM Positions")
         current_pos_index = 0
+
         for i, position in enumerate(positions):
             self.ui.employeePositionComboBox.addItem(position['name'], position['id'])
-            if position['id'] == employee.get('position_id', 0):
+            if 'position_name' in employee and position['name'] == employee['position_name']:
                 current_pos_index = i
+
         self.ui.employeePositionComboBox.setCurrentIndex(current_pos_index)
 
         self.ui.employeeEmailLineEdit.setText(employee['email'])
         self.ui.employeePhoneLineEdit.setText(employee['phone'])
         self.ui.dateStart.setText(employee['hire_date'].strftime('%d.%m.%Y'))
 
-        if employee['fire_date']:
+        if employee.get('fire_date'):
             self.ui.dateFire.setText(employee['fire_date'].strftime('%d.%m.%Y'))
+            self.ui.dateFire.show()
+            self.ui.label_26.show()
         else:
             self.ui.dateFire.hide()
             self.ui.label_26.hide()
 
+        # Обновляем период работы и навыки
         self.update_worked_period(employee)
+        self.update_skills_display(employee)
 
-        if employee['skills']:
-            self.ui.skillsTextEdit.setPlainText(", ".join(employee['skills']))
-        else:
-            self.ui.skillsTextEdit.setPlainText("")
-
-        if employee['skills']:
-            try:
-                skills_dict = eval(employee['skills']) if isinstance(employee['skills'], str) else employee['skills']
-
-                if isinstance(skills_dict, dict):
-                    formatted_skills = []
-                    for category, skills in skills_dict.items():
-                        if skills:
-                            replaced_skills = skills.replace(', ', '\n  - ')
-                            formatted_skills.append(f"{category}:\n  - {replaced_skills}")
-
-                    self.ui.skillsTextEdit.setPlainText("\n\n".join(formatted_skills))
-                else:
-                    self.ui.skillsTextEdit.setPlainText(str(skills_dict))
-            except:
-                self.ui.skillsTextEdit.setPlainText(str(employee['skills']))
-        else:
-            self.ui.skillsTextEdit.setPlainText("Нет информации о навыках")
-
+        # Настраиваем кнопки в зависимости от статуса
         self.setup_buttons_based_on_status(employee['status_name'])
 
+        # Подключаем обработчики кнопок
         self.connect_buttons_handlers(employee)
 
+        # Переходим на страницу сотрудника
         self.ui.mainPages.setCurrentWidget(self.ui.employeePage)
 
     def update_worked_period(self, employee):
