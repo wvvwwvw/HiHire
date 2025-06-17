@@ -642,21 +642,19 @@ class AnswersPage:
                 "WHERE a.interview_id = %s",
                 (interview['id'],))
 
-            skills_by_category = {
-                1: [],  # Технические знания
-                2: [],  # Коммуникация
-                3: [],  # Инструменты
-                4: []  # Практические навыки
-            }
-
+            # Собираем только инструменты (категория_id = 3)
+            tools = []
             for answer in answers:
                 category_id = answer['category_id']
                 answer_type_id = answer['answer_type_id']
 
-                if answer_type_id == 5:
+                if category_id != 3:  # Пропускаем все категории кроме "Инструменты"
                     continue
 
-                if answer_type_id in (1, 2):
+                if answer_type_id == 5:  # Пропускаем вопросы типа Да/Нет
+                    continue
+
+                if answer_type_id in (1, 2):  # Множественный или одиночный выбор
                     selected_options = answer.get('selected_options', '[]')
                     if selected_options and isinstance(selected_options, str):
                         try:
@@ -666,20 +664,18 @@ class AnswersPage:
                                     "SELECT text FROM QuestionOptions WHERE id IN %s",
                                     (selected_ids,))
                                 for opt in options:
-                                    skills_by_category[category_id].append(opt['text'])
+                                    tools.append(opt['text'])
                         except:
                             pass
-                elif answer_type_id in (3, 4, 6):
+                elif answer_type_id in (3, 4, 6):  # Числовой ответ, шкала или текстовый
                     if answer['value_numeric'] is not None:
-                        skills_by_category[category_id].append(str(answer['value_numeric']))
+                        tools.append(str(answer['value_numeric']))
                     elif answer.get('selected_options'):
-                        skills_by_category[category_id].append(answer['selected_options'])
+                        tools.append(answer['selected_options'])
 
+            # Формируем skills только с инструментами
             skills = {
-                "Технические знания": ", ".join(skills_by_category[1]),
-                "Коммуникация": ", ".join(skills_by_category[2]),
-                "Инструменты": ", ".join(skills_by_category[3]),
-                "Практические навыки": ", ".join(skills_by_category[4])
+                "Инструменты": ", ".join(tools) if tools else "Не указано"
             }
 
             candidate = self.db.execute_query(
@@ -699,12 +695,12 @@ class AnswersPage:
                         candidate['phone'],
                         position_id,
                         QDate.currentDate().toString("yyyy-MM-dd"),
-                        10,
+                        10,  # Статус "Работает"
                         str(skills),
-                        1
+                        1  # ID организации
                     ))
 
-                self.update_candidate_status(interview['candidate_id'], 4)
+                self.update_candidate_status(interview['candidate_id'], 4)  # Статус "Принят"
         except Exception as e:
             print(f"Ошибка при найме кандидата: {e}")
 

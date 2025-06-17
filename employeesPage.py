@@ -248,7 +248,6 @@ class EmployeePage:
         """Открывает страницу с подробной информацией о сотруднике"""
         self.current_employee_id = employee['id']
         self.update_employee_info(employee)
-        self.setup_employee_actions(employee)
 
     def update_employee_info(self, employee):
         """Обновляет информацию о сотруднике на странице"""
