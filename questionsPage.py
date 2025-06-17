@@ -125,7 +125,7 @@ class QuestionsPage:
         title_label.setStyleSheet("font-size:15pt; background: transparent;")
         top_row_layout.addWidget(title_label, 1)
 
-        if self.role_id == 1:
+        if self.role_id == 1 or self.user_id == template['created_by']:
             delete_btn = self.create_delete_button(template)
             top_row_layout.addWidget(delete_btn, 0, Qt.AlignRight)
 
